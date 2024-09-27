@@ -1,4 +1,3 @@
-
 include ':cosmoAnimator'
 
 rootProject.name='Cosmo-SmartWatch'

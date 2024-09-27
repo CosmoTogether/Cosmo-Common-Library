@@ -1,4 +1,4 @@
-package com.leed.customanimator
+package com.cosmo.cosmoanimator
 
 import android.animation.ObjectAnimator
 import android.content.Context
@@ -8,6 +8,7 @@ import android.view.animation.AccelerateDecelerateInterpolator
 import android.widget.ImageView
 import android.widget.RelativeLayout
 import android.widget.TextView
+import com.leed.customanimator.R
 
 class CosmoAnimator @JvmOverloads constructor(
     context: Context,

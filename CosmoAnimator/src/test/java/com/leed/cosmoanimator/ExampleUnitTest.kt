@@ -1,4 +1,4 @@
-package com.leed.customanimator
+package com.leed.cosmoanimator
 
 import org.junit.Test
 

@@ -1,10 +1,11 @@
 plugins {
     id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
+    id 'maven-publish'
 }
 
 android {
-    namespace 'com.leed.customanimator'
+    namespace 'com.cosmo.cosmoanimator'
     compileSdk 34
 
     defaultConfig {
@@ -38,3 +39,4 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.2.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.6.1'
 }
+
