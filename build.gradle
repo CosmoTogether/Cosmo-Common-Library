@@ -27,3 +27,15 @@ plugins {
     id 'com.diffplug.spotless' version '6.25.0' apply false
     id 'org.jetbrains.kotlin.android' version '1.9.10' apply false
 }
+
+allprojects {
+    tasks.withType(JavaCompile) {
+        options.forkOptions.jvmArgs += ['--add-opens', 'java.base/java.lang=ALL-UNNAMED']
+    }
+}
+
+tasks.withType(org.gradle.api.tasks.testing.Test) {
+    useJUnitPlatform()
+    testLogging.showStandardStreams = true
+    maxHeapSize = "1g"
+}

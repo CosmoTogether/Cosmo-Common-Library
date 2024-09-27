@@ -10,7 +10,7 @@ android {
 
     defaultConfig {
         minSdk 24
-
+        targetSdk 34
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
     }
@@ -21,17 +21,18 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
+
     kotlinOptions {
-        jvmTarget = '1.8'
+        jvmTarget = '17'
     }
 }
 
 dependencies {
-
     implementation 'androidx.core:core-ktx:1.13.1'
     implementation 'androidx.appcompat:appcompat:1.7.0'
     implementation 'com.google.android.material:material:1.12.0'
@@ -40,3 +41,44 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.6.1'
 }
 
+publishing {
+    publications {
+        release(MavenPublication) {
+            // Reference the release component correctly
+            afterEvaluate {
+                from components.release
+            }
+
+            groupId = 'com.github.zohaircosmo'
+            artifactId = 'cosmoAnimatorLibrary'
+            version = '1.0.0'
+
+            pom {
+                name = 'CosmoAnimator Library'
+                description = 'A custom loading animation library for Android.'
+                url = 'https://github.com/zohaircosmo/cosmoAnimatorLibrary'
+
+                licenses {
+                    license {
+                        name = 'MIT License'
+                        url = 'https://opensource.org/licenses/MIT'
+                    }
+                }
+
+                developers {
+                    developer {
+                        id = 'zohaircosmo'
+                        name = 'Zohair Cosmo'
+                        email = 'zohair@cosmotogether.com'
+                    }
+                }
+
+                scm {
+                    connection = 'scm:git:git://github.com/zohaircosmo/cosmoAnimatorLibrary.git'
+                    developerConnection = 'scm:git:ssh://github.com/zohaircosmo/cosmoAnimatorLibrary.git'
+                    url = 'https://github.com/zohaircosmo/cosmoAnimatorLibrary'
+                }
+            }
+        }
+    }
+}
