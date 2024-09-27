@@ -8,7 +8,7 @@ import android.view.animation.AccelerateDecelerateInterpolator
 import android.widget.ImageView
 import android.widget.RelativeLayout
 import android.widget.TextView
-import com.cosmo.customanimator.R
+
 
 class CosmoAnimator @JvmOverloads constructor(
     context: Context,
