@@ -1,6 +1,6 @@
 include ':cosmoAnimator'
 
-rootProject.name='Cosmo-SmartWatch'
+rootProject.name='Cosmo-Animator'
 
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
