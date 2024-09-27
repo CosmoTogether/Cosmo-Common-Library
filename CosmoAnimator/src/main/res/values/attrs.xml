@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="cosmoTextVerySmall" format="reference" />
+    <attr name="cosmoTextSmall" format="reference" />
+    <attr name="cosmoTextMedium" format="reference" />
+    <attr name="cosmoTextLarge" format="reference" />
+    <attr name="cosmoTextLarger" format="reference" />
+    <attr name="cosmoTextVeryLarge" format="reference" />
+    <attr name="cosmoTextHuge" format="reference" />
+    <attr name="cosmoTextEnormous" format="reference" />
+    <attr name="cosmoTextGiant" format="reference" />
+
+
+</resources>
