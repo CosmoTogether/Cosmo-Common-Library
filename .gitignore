@@ -26,3 +26,12 @@ local.properties
 
 # Others
 *.keystore
+/.idea/caches/deviceStreaming.xml
+/.idea/.gitignore
+/.idea/appInsightsSettings.xml
+/.idea/compiler.xml
+/.idea/gradle.xml
+/.idea/kotlinc.xml
+/.idea/migrations.xml
+/.idea/misc.xml
+/.idea/vcs.xml

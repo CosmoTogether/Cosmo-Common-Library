@@ -11,7 +11,7 @@ import android.widget.TextView
 import com.cosmo.cosmoanimator.R
 
 
-class CosmoAnimator @JvmOverloads constructor(
+class CosmoLoader @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
     defStyleAttr: Int = 0
