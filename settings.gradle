@@ -1,6 +1,6 @@
-include ':cosmoAnimator'
+include ':loading-animation'
 
-rootProject.name='Cosmo-Animator'
+rootProject.name='Cosmo-LoadingAnimation'
 
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)

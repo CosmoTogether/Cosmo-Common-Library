@@ -1,4 +1,4 @@
-package com.leed.cosmoanimator
+package com.cosmotogether.loading
 
 import org.junit.Test
 
