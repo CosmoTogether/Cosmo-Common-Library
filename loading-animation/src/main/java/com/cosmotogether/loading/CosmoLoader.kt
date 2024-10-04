@@ -29,7 +29,7 @@ class CosmoLoader @JvmOverloads constructor(
 
     private fun initView() {
         // Inflate the layout for the loader
-        LayoutInflater.from(context).inflate(R.layout.cosmo_animator, this, true)
+        LayoutInflater.from(context).inflate(R.layout.cosmo_loader, this, true)
         layout = findViewById(R.id.checkProgress)
         imgProgress = findViewById(R.id.imgProgress)
         msgText = findViewById(R.id.msgText)
