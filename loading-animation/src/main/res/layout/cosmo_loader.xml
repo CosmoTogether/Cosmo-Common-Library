@@ -39,20 +39,22 @@
             android:scaleType="centerCrop"
             android:src="@drawable/ic_loading_mover" />
 
+        <TextView
+            android:id="@+id/msgText"
+            style="?cosmoTextMedium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imgBkg"
+            android:layout_marginTop="20dp"
+            android:background="#00000000"
+            android:gravity="center"
+            android:text="@string/custom_text"
+            android:textColor="#AAAFB4" />
+
     </RelativeLayout>
 
 
 
-    <TextView
-        android:id="@+id/msgText"
-        style="?cosmoTextMedium"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/imgBkg"
-        android:layout_marginTop="20dp"
-        android:background="#00000000"
-        android:gravity="center"
-        android:text="@string/custom_text"
-        android:textColor="#AAAFB4" />
+
 
 </RelativeLayout>
