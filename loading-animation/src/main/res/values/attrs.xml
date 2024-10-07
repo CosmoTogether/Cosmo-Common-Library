@@ -11,5 +11,10 @@
     <attr name="cosmoTextEnormous" format="reference" />
     <attr name="cosmoTextGiant" format="reference" />
 
+    <declare-styleable name="CosmoLoader">
+        <attr name="message" format="string" />
+        <attr name="speed" format="integer" />
+        <attr name="maxOffset" format="float" />
+    </declare-styleable>
 
 </resources>

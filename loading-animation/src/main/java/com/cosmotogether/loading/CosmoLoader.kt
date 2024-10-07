@@ -9,37 +9,43 @@ import android.widget.RelativeLayout
 import com.cosmo.loadinganimation.R
 import com.cosmo.loadinganimation.databinding.CosmoLoaderBinding
 
-class CosmoLoader private constructor(
+class CosmoLoader @JvmOverloads constructor(
     context: Context,
-    private val message: String?,
-    private val speed: Long,
-    private val maxOffset: Float
-) : RelativeLayout(context) {
+    attrs: AttributeSet? = null,
+    defStyleAttr: Int = 0
+) : RelativeLayout(context, attrs, defStyleAttr) {
 
-    private val binding: CosmoLoaderBinding = CosmoLoaderBinding.inflate(LayoutInflater.from(context), this, true)
+    private val binding: CosmoLoaderBinding =
+        CosmoLoaderBinding.inflate(LayoutInflater.from(context), this, true)
     private lateinit var animator: ObjectAnimator
+    private var message: String? = null
+    private var speed: Long = 2000L
+    private var maxOffset: Float = 70f
 
     init {
+        attrs?.let {
+            val typedArray = context.obtainStyledAttributes(it, R.styleable.CosmoLoader, 0, 0)
+            message = typedArray.getString(R.styleable.CosmoLoader_message)
+            speed = typedArray.getInt(R.styleable.CosmoLoader_speed, 2000).toLong()
+            maxOffset = typedArray.getFloat(R.styleable.CosmoLoader_maxOffset, 70f)
+            typedArray.recycle()
+        }
         message?.let { binding.msgText.text = it }
     }
-
 
     fun startAnimation() {
         val density = resources.displayMetrics.density
         val maxOffsetPx = maxOffset * density
 
-
-        animator = ObjectAnimator.ofFloat(binding.imgProgress, "translationX", 0f, maxOffsetPx).apply {
-            duration = speed  // Use custom speed
-            interpolator = AccelerateDecelerateInterpolator()  // Smooth speed variation
-            repeatMode = ObjectAnimator.REVERSE
-            repeatCount = ObjectAnimator.INFINITE
-        }
-
-
+        animator =
+            ObjectAnimator.ofFloat(binding.imgProgress, "translationX", 0f, maxOffsetPx).apply {
+                duration = speed
+                interpolator = AccelerateDecelerateInterpolator()
+                repeatMode = ObjectAnimator.REVERSE
+                repeatCount = ObjectAnimator.INFINITE
+            }
         animator.start()
     }
-
 
     fun stopAnimation() {
         if (this::animator.isInitialized && animator.isRunning) {
@@ -48,13 +54,14 @@ class CosmoLoader private constructor(
     }
 
     fun updateMessage(newMessage: String) {
+        message = newMessage
         binding.msgText.text = newMessage
     }
 
     class Builder(private val context: Context) {
         private var message: String? = null
-        private var speed: Long = 2000L  // Default duration for animation
-        private var maxOffset: Float = 70f  // Default max offset in dp
+        private var speed: Long = 2000L
+        private var maxOffset: Float = 70f
 
         fun setMessage(message: String) = apply {
             this.message = message
@@ -69,7 +76,11 @@ class CosmoLoader private constructor(
         }
 
         fun build(): CosmoLoader {
-            return CosmoLoader(context, message, speed, maxOffset)
+            return CosmoLoader(context).apply {
+                this.message = this@Builder.message
+                this.speed = this@Builder.speed
+                this.maxOffset = this@Builder.maxOffset
+            }
         }
     }
 }
