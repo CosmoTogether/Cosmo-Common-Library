@@ -1,18 +1,29 @@
-// Creating the loader with the builder pattern
-val loader = CosmoLoader.Builder(context)
-    .setMessage("Please wait...")
-    .setSpeed(1500L)
-    .setMaxOffset(80f)
-    .build()
+```kotlin
+class MainActivity : AppCompatActivity() {
+    private lateinit var cosmoLoader: CosmoLoader
 
-// Starting the animation
-loader.startAnimation()
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
 
-// Updating the message dynamically
-loader.updateMessage("Almost done...")
+        val layout = findViewById<RelativeLayout>(R.id.main_layout)
 
-//Updating speed dynamically (Speed i n long in millisecond for loader from one end to other)
-loader.updateSpeed(2500)
+        cosmoLoader = CosmoLoader.Builder(this)
+            .setSpeed(1500L)
+            .setMaxOffset(70f)
+            .build()
 
-// Stopping the animation
-loader.stopAnimation()
+        layout.addView(cosmoLoader)
+
+        cosmoLoader.startAnimation()
+
+        cosmoLoader.updateMessage("Almost done...")
+
+        cosmoLoader.updateMessage("UpsIde Down")
+    }
+
+    override fun onStop() {
+        super.onStop()
+        cosmoLoader.stopAnimation()
+    }
+}
