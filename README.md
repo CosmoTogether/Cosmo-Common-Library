@@ -1,3 +1,4 @@
+```kotlin
 class MainActivity : AppCompatActivity() {
     private lateinit var cosmoLoader: CosmoLoader
 
