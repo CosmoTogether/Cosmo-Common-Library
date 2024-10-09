@@ -56,7 +56,7 @@ publishing {
 
             groupId = 'com.github.zohaircosmo'
             artifactId = 'com.cosmo.loadinganimation'
-            version = '1.0.4'
+            version = '1.0.5'
 
             pom {
                 name = 'CosmoAnimator Library'
