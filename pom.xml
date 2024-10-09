@@ -4,7 +4,7 @@
     <modelVersion>1.0.0</modelVersion>
     <groupId>com.github.zohaircosmo</groupId>
     <artifactId>com.cosmo.loadinganimation</artifactId>
-    <version>1.0.5</version>
+    <version>1.0.6</version>
     <packaging>pom</packaging>
     <description>Fourth version release</description>
 </project>
