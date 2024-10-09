@@ -4,5 +4,5 @@ before_install:
   - ./scripts/prepareJitpackEnvironment.sh
 install:
   - FILE="-Dfile=com.cosmo.loadinganimation.aar" #com.cosmo.loadinganimation.aar
-  - mvn install:install-file $FILE -DgroupId=com.github.zohaircosmo -DartifactId=com.cosmo.loadinganimation -Dversion=1.0.6 -Dpackaging=aar -DgeneratePom=true
+  - mvn install:install-file $FILE -DgroupId=com.github.zohaircosmo -DartifactId=com.cosmo.loadinganimation -Dversion=1.0.7 -Dpackaging=aar -DgeneratePom=true
   #com.github.zohaircosmo                    #com.cosmo.loadinganimation #1.0.6
