@@ -6,6 +6,7 @@ import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.view.animation.AccelerateDecelerateInterpolator
 import android.widget.RelativeLayout
+import androidx.core.content.res.ResourcesCompat
 import com.cosmo.loadinganimation.R
 import com.cosmo.loadinganimation.databinding.CosmoLoaderBinding
 
@@ -30,6 +31,8 @@ class CosmoLoader @JvmOverloads constructor(
             maxOffset = typedArray.getFloat(R.styleable.CosmoLoader_maxOffset, 70f)
             typedArray.recycle()
         }
+        binding.logo.visibility = VISIBLE
+        binding.logo.setImageDrawable(resources.getDrawable(R.drawable.ic_cosmo_logo))
         message?.let { binding.msgText.text = it }
     }
 

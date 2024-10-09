@@ -1,0 +1,32 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="SettingsTheme" parent="Theme.AppCompat.Light">
+        <!--<item name="android:textSize">@dimen/textSizeSettings</item>-->
+    </style>
+
+    <style name="Theme.AppCompat.Translucent" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation</item>
+    </style>
+
+    <style name="Theme_Cosmo_Animator" parent="Theme.AppCompat.Light">
+        <item name="cosmoTextMedium">@style/cosmo_text_medium_smaller</item>
+        <item name="cosmoTextLarge">@style/cosmo_text_large_smaller</item>
+    </style>
+
+
+
+    <style name="cosmo_text_large_smaller">
+        <item name="android:textSize">30sp</item>
+    </style>
+    <style name="cosmo_text_medium_smaller">
+        <item name="android:textSize">22sp</item>
+    </style>
+
+
+
+
+</resources>
