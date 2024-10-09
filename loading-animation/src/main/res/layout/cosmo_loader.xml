@@ -3,12 +3,12 @@
     android:id="@+id/checkProgress"
     android:layout_width="match_parent"
     android:layout_height="fill_parent"
-    android:background="#42f560">
+    android:background="#f5b8ed">
 
     <ImageView
         android:id="@+id/logo"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
         android:layout_above="@id/imgBkg"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="40dp"
