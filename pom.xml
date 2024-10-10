@@ -1,17 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns="http://maven.apache.org/POM/3.9.9"
-    xsi:schemaLocation="http://maven.apache.org/POM/3.9.9 http://maven.apache.org/xsd/maven-3.9.9.xsd">
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <modelVersion>1.0.0</modelVersion>
     <groupId>com.github.zohaircosmo</groupId>
     <artifactId>com.cosmo.loadinganimation</artifactId>
-    <version>1.0.8</version>
+    <version>1.0.4</version>
     <packaging>pom</packaging>
-    <description>Seventh version release</description>
-    <repositories>
-        <repository>
-            <id>jitpack.io</id>
-            <url>https://jitpack.io</url>
-        </repository>
-    </repositories>
+    <description>Fourth version release</description>
 </project>
