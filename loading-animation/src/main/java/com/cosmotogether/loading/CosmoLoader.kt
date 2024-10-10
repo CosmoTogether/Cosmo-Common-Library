@@ -32,7 +32,7 @@ class CosmoLoader @JvmOverloads constructor(
             typedArray.recycle()
         }
         binding.logo.visibility = VISIBLE
-        binding.logo.setImageDrawable(resources.getDrawable(R.drawable.ic_cosmo_logo))
+        binding.logo.setImageDrawable(resources.getDrawable(R.drawable.ic_cosmo_logo,null))
         message?.let { binding.msgText.text = it }
     }
 
