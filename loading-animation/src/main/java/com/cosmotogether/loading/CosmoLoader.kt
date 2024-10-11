@@ -20,6 +20,7 @@ class CosmoLoader @JvmOverloads constructor(
         CosmoLoaderBinding.inflate(LayoutInflater.from(context), this, true)
     private lateinit var animator: ObjectAnimator
     private var message: String? = null
+    private var subTitle: String? = ""
     private var speed: Long = 2000L
     private var maxOffset: Float = 70f
 
@@ -32,8 +33,9 @@ class CosmoLoader @JvmOverloads constructor(
             typedArray.recycle()
         }
         binding.logo.visibility = VISIBLE
-        binding.logo.setImageDrawable(resources.getDrawable(R.drawable.ic_cosmo_logo,null))
+        binding.logo.setImageDrawable(resources.getDrawable(R.drawable.ic_cosmo_logo, null))
         message?.let { binding.msgText.text = it }
+        subTitle?.let {if (it.isNotBlank()) binding.msgText2.text = it }
     }
 
     fun startAnimation() {
@@ -61,13 +63,23 @@ class CosmoLoader @JvmOverloads constructor(
         binding.msgText.text = newMessage
     }
 
+    fun updateSubTitle(subtitle: String) {
+        subTitle = subtitle
+        binding.msgText2.text = subtitle
+    }
+
     class Builder(private val context: Context) {
         private var message: String? = null
         private var speed: Long = 2000L
         private var maxOffset: Float = 70f
+        private var subTitle: String? = null
 
         fun setMessage(message: String) = apply {
             this.message = message
+        }
+
+        fun setSubTitle(subtitle: String) = apply {
+            this.subTitle = subtitle
         }
 
         fun setSpeed(speed: Long) = apply {
@@ -81,6 +93,7 @@ class CosmoLoader @JvmOverloads constructor(
         fun build(): CosmoLoader {
             return CosmoLoader(context).apply {
                 this.message = this@Builder.message
+                this.subTitle = this@Builder.subTitle
                 this.speed = this@Builder.speed
                 this.maxOffset = this@Builder.maxOffset
             }
