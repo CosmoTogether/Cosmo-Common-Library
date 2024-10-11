@@ -53,7 +53,7 @@ publishing {
             // Reference the release component correctly
             groupId = 'com.github.zohaircosmo'
             artifactId = 'com.cosmo.loadinganimation'
-            version = '1.0.9'
+            version = '1.1.0-alpha'
             afterEvaluate {
                 from components.release
 
@@ -91,7 +91,7 @@ publishing {
             url layout.buildDirectory.dir("repository/com/github/zohaircosmo")
             credentials { username authToken }
             tasks.register('generateRepo', Zip) {
-                def publishTask = tasks.named('1.0.9')
+                def publishTask = tasks.named('1.1.0-alpha')
                 from publishTask.map { it.getRepository().getUrl() }
                 into 'com.cosmo.loadinganimation'
                 archiveFileName.set('com.cosmo.loadinganimation.zip')
