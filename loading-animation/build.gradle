@@ -46,17 +46,18 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.6.1'
 }
 
+
 publishing {
     publications {
         release(MavenPublication) {
             // Reference the release component correctly
-            afterEvaluate {
-                from components.release
-            }
             groupId = 'com.github.zohaircosmo'
             artifactId = 'com.cosmo.loadinganimation'
             version = '1.0.9'
+            afterEvaluate {
+                from components.release
 
+            }
             pom {
                 name = 'CosmoAnimator Library'
                 description = 'A custom loading animation library for Android.'
@@ -87,8 +88,14 @@ publishing {
     }
     repositories {
         maven {
-            url "https://jitpack.io"
+            url layout.buildDirectory.dir("repository/com/github/zohaircosmo")
             credentials { username authToken }
+            tasks.register('generateRepo', Zip) {
+                def publishTask = tasks.named('1.0.9')
+                from publishTask.map { it.getRepository().getUrl() }
+                into 'com.cosmo.loadinganimation'
+                archiveFileName.set('com.cosmo.loadinganimation.zip')
+            }
         }
     }
 }
