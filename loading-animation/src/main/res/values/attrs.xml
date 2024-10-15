@@ -25,4 +25,10 @@
             <enum name="date_medium_text" value="4"/>
         </attr>
     </declare-styleable>
+
+    <declare-styleable name="StatusBarWidget">
+        <attr name="position" format="integer" />
+        <attr name="titleText" format="string" />
+        <attr name="backgroundColor" format="color" />
+    </declare-styleable>
 </resources>
