@@ -1,6 +1,6 @@
 include ':loading-animation'
 
-rootProject.name='Cosmo-LoadingAnimation'
+rootProject.name='Cosmo-Common-Library'
 
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
