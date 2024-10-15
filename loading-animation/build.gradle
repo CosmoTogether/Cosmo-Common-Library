@@ -53,7 +53,7 @@ publishing {
             // Reference the release component correctly
             groupId = 'com.github.zohaircosmo'
             artifactId = 'com.cosmo.loadinganimation'
-            version = '1.1.0-alpha'
+            version = '1.1.0-beta'
             afterEvaluate {
                 from components.release
 
