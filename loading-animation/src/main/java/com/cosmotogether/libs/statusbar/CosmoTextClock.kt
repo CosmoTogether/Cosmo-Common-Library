@@ -1,128 +1,124 @@
-package com.cosmotogether.libs.statusbar;
+package com.cosmotogether.libs.statusbar
 
-import android.content.BroadcastReceiver;
-import android.content.Context;
-import android.content.Intent;
-import android.content.IntentFilter;
-import android.content.res.TypedArray;
-import android.util.AttributeSet;
-import android.view.View;
+import android.content.BroadcastReceiver
+import android.content.Context
+import android.content.Intent
+import android.content.IntentFilter
+import android.text.format.DateFormat
+import android.util.AttributeSet
+import android.view.View
+import androidx.appcompat.widget.AppCompatTextView
+import com.cosmo.loadinganimation.R
 
-import io.senlab.cosmo.R;
-import io.senlab.cosmo.Util;
+class CosmoTextClock : AppCompatTextView {
+    private var display_type = 0
+    private val mIntentReceiver: BroadcastReceiver = object : BroadcastReceiver() {
+        override fun onReceive(context: Context, intent: Intent) {
+            onTimeChanged()
+        }
+    }
+    private var registered = false
 
-public class CosmoTextClock extends androidx.appcompat.widget.AppCompatTextView {
-    private int display_type;
-    private final BroadcastReceiver mIntentReceiver =
-            new BroadcastReceiver() {
-                @Override
-                public void onReceive(Context context, Intent intent) {
-                    onTimeChanged();
-                }
-            };
-    private boolean registered;
+    constructor(context: Context) : super(context)
 
-    public CosmoTextClock(Context context) {
-        super(context);
+    constructor(context: Context, attrs: AttributeSet?) : super(context, attrs) {
+        setAttribs(context, attrs)
     }
 
-    public CosmoTextClock(Context context, AttributeSet attrs) {
-        super(context, attrs);
-        setAttribs(context, attrs);
+    constructor(context: Context, attrs: AttributeSet?, defStyle: Int) : super(
+        context,
+        attrs,
+        defStyle
+    ) {
+        setAttribs(context, attrs)
     }
 
-    public CosmoTextClock(Context context, AttributeSet attrs, int defStyle) {
-        super(context, attrs, defStyle);
-        setAttribs(context, attrs);
-    }
-
-    @Override
-    protected void onAttachedToWindow() {
-        super.onAttachedToWindow();
-        onTimeChanged();
+    override fun onAttachedToWindow() {
+        super.onAttachedToWindow()
+        onTimeChanged()
         if (!registered) {
-            registered = true;
-            registerReceiver();
+            registered = true
+            registerReceiver()
         }
     }
 
-    @Override
-    protected void onDetachedFromWindow() {
-        super.onDetachedFromWindow();
+    override fun onDetachedFromWindow() {
+        super.onDetachedFromWindow()
         if (registered) {
-            unregisterReceiver();
-            registered = false;
+            unregisterReceiver()
+            registered = false
         }
     }
 
-    @Override
-    protected void onVisibilityChanged(View changedView, int visibility) {
-        super.onVisibilityChanged(changedView, visibility);
-        if (visibility == VISIBLE) refresh();
+    override fun onVisibilityChanged(changedView: View, visibility: Int) {
+        super.onVisibilityChanged(changedView, visibility)
+        if (visibility == VISIBLE) refresh()
     }
 
-    @Override
-    public void onScreenStateChanged(int screenState) {
-        super.onScreenStateChanged(screenState);
-        if (screenState == SCREEN_STATE_ON) onTimeChanged();
+    override fun onScreenStateChanged(screenState: Int) {
+        super.onScreenStateChanged(screenState)
+        if (screenState == SCREEN_STATE_ON) onTimeChanged()
     }
 
-    private void registerReceiver() {
-        final IntentFilter filter = new IntentFilter();
-        filter.addAction(Intent.ACTION_TIME_TICK);
-        getContext().registerReceiver(mIntentReceiver, filter);
+    private fun registerReceiver() {
+        val filter = IntentFilter()
+        filter.addAction(Intent.ACTION_TIME_TICK)
+        context.registerReceiver(mIntentReceiver, filter)
     }
 
-    private void unregisterReceiver() {
+    private fun unregisterReceiver() {
         try {
-            getContext().unregisterReceiver(mIntentReceiver);
-        } catch (Exception e) {
-            e.printStackTrace();
+            context.unregisterReceiver(mIntentReceiver)
+        } catch (e: Exception) {
+            e.printStackTrace()
         }
     }
 
-    private void onTimeChanged() {
-        boolean is24 = android.text.format.DateFormat.is24HourFormat(getContext());
-        String[] elements =
-                Util.getFormattedTime(
-                                getContext(),
-                                System.currentTimeMillis(),
-                                Util.TIME_FORMAT_HH_H_hh_h_mm_ss_SSS_a)
-                        .split("_");
-        String display_text;
-        switch (display_type) {
-            case 4: // date_medium_text
-                display_text =
-                        Util.getFormattedDate(
-                                getContext(),
-                                System.currentTimeMillis(),
-                                Util.DATE_FORMAT_MEDIUMTEXT);
-                break;
-            case 3: // am_pm_only_12
-                display_text = is24 ? "" : elements[7];
-                break;
-            case 2: // two_line_no_am_pm
-                display_text =
-                        is24 ? elements[0] + "\n" + elements[4] : elements[2] + "\n" + elements[4];
-                break;
-            case 1: // no_am_pm
-                display_text =
-                        is24 ? elements[0] + ":" + elements[4] : elements[3] + ":" + elements[4];
-                break;
-            case 0: // default
-            default:
-                display_text = Util.getFormattedTime(getContext(), System.currentTimeMillis());
+    private fun onTimeChanged() {
+        val is24 = DateFormat.is24HourFormat(context)
+        val elements: List<String> =
+            context.getCosmoFormattedTime(
+                timestamp = System.currentTimeMillis(),
+                format = Util.TIME_FORMAT_HH_H_hh_h_mm_ss_SSS_a, localeSelection = "AE"
+            ).split("_")
+        val display_text: String
+        when (display_type) {
+            4 -> display_text =
+                Util.getFormattedDate(
+                    context,
+                    System.currentTimeMillis(),
+                    Util.DATE_FORMAT_MEDIUMTEXT
+                )
+
+            3 -> display_text = if (is24) "" else elements[7]
+            2 -> display_text =
+                if (is24) """
+     ${elements[0]}
+     ${elements[4]}
+     """.trimIndent() else """
+     ${elements[2]}
+     ${elements[4]}
+     """.trimIndent()
+
+            1 -> display_text =
+                if (is24) elements[0] + ":" + elements[4] else elements[3] + ":" + elements[4]
+
+            0 -> display_text =
+                Util.getFormattedTime(context, System.currentTimeMillis(), localeSelection = "")
+
+            else -> display_text =
+                Util.getFormattedTime(context, System.currentTimeMillis(), localeSelection = "")
         }
-        setText(display_text);
+        text = display_text
     }
 
-    public void refresh() {
-        onTimeChanged();
+    fun refresh() {
+        onTimeChanged()
     }
 
-    private void setAttribs(Context context, AttributeSet attrs) {
-        TypedArray array = context.obtainStyledAttributes(attrs, R.styleable.CosmoTextClock);
-        display_type = array.getInteger(R.styleable.CosmoTextClock_display_type, 0);
-        array.recycle();
+    private fun setAttribs(context: Context, attrs: AttributeSet?) {
+        val array = context.obtainStyledAttributes(attrs, R.styleable.CosmoTextClock)
+        display_type = array.getInteger(R.styleable.CosmoTextClock_display_type, 0)
+        array.recycle()
     }
 }
