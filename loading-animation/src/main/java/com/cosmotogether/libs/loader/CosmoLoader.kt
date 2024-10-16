@@ -1,4 +1,4 @@
-package com.cosmotogether.loading
+package com.cosmotogether.libs.loader
 
 import android.animation.ObjectAnimator
 import android.content.Context
@@ -6,7 +6,6 @@ import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.view.animation.AccelerateDecelerateInterpolator
 import android.widget.RelativeLayout
-import androidx.core.content.res.ResourcesCompat
 import com.cosmo.loadinganimation.R
 import com.cosmo.loadinganimation.databinding.CosmoLoaderBinding
 

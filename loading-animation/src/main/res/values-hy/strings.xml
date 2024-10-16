@@ -1,0 +1,405 @@
+
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="partner_name">uKid</string>
+
+    <string name="module_phone">Հեռախոս</string>
+    <string name="module_message">Հաղորդագրություն</string>
+    <string name="module_contacts">Կոնտակտներ</string>
+    <string name="module_friends">Ընկերներ</string>
+    <string name="module_camera">Տեսախցիկ</string>
+    <string name="module_gallery">Պատկերասրահ</string>
+    <string name="module_recorder">Ձայնագրիչ</string>
+    <string name="module_record">Ձայնագրել</string>
+    <string name="module_alarm">Զարթուցիչ</string>
+    <string name="module_stopwatch">Վայրկյանաչափ</string>
+    <string name="module_timer">Վայրկյանաչափ</string>
+    <string name="module_calculator">Հաշվիչ</string>
+    <string name="module_calendar">Օրացույց</string>
+    <string name="module_qr">QR</string>
+    <string name="module_steps">Քայլեր</string>
+    <string name="module_setup">Կարգաբերում</string>
+    <string name="module_partner_tools">Գործիքներ</string>
+    <string name="module_flashlight">Լապտեր</string>
+    <string name="module_game2048">Խաղ 2048</string>
+    <string name="module_magiccamera">Կախարդական տեսախցիկ</string>
+    <string name="module_themes">Թեմաներ</string>
+
+    <string name="preference_title_startup_color">Գույնը</string>
+    <string name="preference_title_startup_color_blue">Կապույտ</string>
+    <string name="preference_title_startup_color_pink">Մանուշակագույն</string>
+    <string name="preference_title_startup_color_teal">Փիրուզագույն</string>
+
+    <string name="preference_title_background">Ֆոն</string>
+    <string name="preference_title_manage_device">Կառավարել սարքը</string>
+
+    <string name="preference_title_wifi_settings">Wi-Fi կարգավորումներ</string>
+    <string name="preference_title_keyboard_settings">Ստեղնաշարի կարգավորումներ</string>
+    <string name="preference_title_upgradeversion">SW թարմացում</string>
+    <string name="preference_title_version">Տարբերակ</string>
+    <string name="preference_title_version_app">Հավելված v.</string>
+    <string name="preference_title_version_boot">Տարբերակ</string>
+    <string name="preference_title_partner_tools">Ծրագրային գործիքներ</string>
+    <string name="preference_title_demos">Դեմոներ</string>
+    <string name="preference_title_truetext">TrueText</string>
+    <string name="preference_title_walkietalkie">WalkieTalkie</string>
+    <string name="preference_title_sipcall">SIP զանգ</string>
+    <string name="preference_title_system_settings">Համակարգի կարգավորումներ</string>
+    <string name="preference_title_connectivity_status">Կապի կարգավիճակ</string>
+    <string name="preference_title_ota_test">Ինտերնետի թեսթ</string>
+    <string name="preference_title_logcat">Logcat</string>
+    <string name="preference_title_logcat_start">Start logcat</string>
+    <string name="preference_title_logcat_stop">Stop logcat</string>
+    <string name="preference_title_logcat_status">Կարգավիճակ</string>
+    <string name="logcat_status_running">ընթանում է</string>
+    <string name="logcat_status_stopped">ավարտ</string>
+    <string name="preference_title_logcat_start_onboot">Գրանցումների մեկնարկ</string>
+    <string name="preference_title_sos">SOS</string>
+    <string name="preference_title_fwota">Ծրագրի թարմացում</string>
+    <string name="preference_title_onboarding">Ծանոթություն</string>
+    <string name="preference_title_production_server">Use production server</string>
+    <string name="preference_title_engineermode">Ծրագրավորման ռեժիմ</string>
+    <string name="preference_title_firststart">Enable Setup Start</string>
+    <string name="preference_title_switch_prodqa">Անցում QA/PROD</string>
+    <string name="preference_title_show_dialer_keypad">Ցույց տալ ստեղնաշարը</string>
+    <string name="preference_title_functional_log">Ակտիվացնել ֆունկցիոնալ գրացումները</string>
+
+    <string name="preference_title_gps">GPS տեղանք</string>
+    <string name="gps_lat">Լայնություն</string>
+    <string name="gps_long">Երկարություն</string>
+    <string name="gps_waiting">Տեղանքի սպասում …</string>
+    <string name="gps_error">GPS-ի սխալ</string>
+
+    <string name="preference_title_qr">Կցել սարքը</string>
+    <string name="preference_title_send_functional_log">Ուղարկել ֆունկցիոնալ գրանցումների մատյան</string>
+    <string name="preference_title_restart_app">Վերագործարկել հավելվածը</string>
+    <string name="preference_title_send_acra">Ուղարկել հաշվետվություն վճարի վերաբերյալ</string>
+
+    <string name="connectivity_connection">Ներկա կապը</string>
+    <string name="connectivity_wifi">Wi-Fi կապ</string>
+    <string name="connectivity_wifi_off">Wi-Fi-ն անջատված է</string>
+    <string name="connectivity_cellular">Բջջային կապ</string>
+    <string name="connectivity_cellular_sim_problem">SIM-ի խնդիր</string>
+    <string name="connectivity_signal_level">Ազդանշանի ուժգնությունը</string>
+    <string name="connectivity_signal_level_none">Ոչ մեկը կամ ճանաչված չէ</string>
+    <string name="connectivity_signal_level_poor">Թույլ</string>
+    <string name="connectivity_signal_level_moderate">Միջին</string>
+    <string name="connectivity_signal_level_good">Լավ</string>
+    <string name="connectivity_signal_level_great">Գերազանց</string>
+    <string name="connectivity_mqtt">MQTT կապ</string>
+
+    <string name="error_module_not_installed">Մոդուլը կարգաբերված չէ</string>
+
+    <string name="alarm">Զարթուցիչ</string>
+    <string name="alarm_alarms">Զարթուցիչներ</string>
+    <string name="alarm_stopwatch">Վայրկյանաչափ</string>
+    <string name="alarm_countdown">Վայրկյանաչափ</string>
+
+    <string name="alarm_message">Գրել հաղորդագրություն</string>
+    <string name="alarm_save">Պահպանել</string>
+    <string name="alarm_new">Ավելացնել զարթուցիչ</string>
+    <string name="alarm_remove">X</string>
+    <string name="alarm_error">Սխալ</string>
+
+    <string name="stopwatch_start">Սկսել</string>
+    <string name="stopwatch_stop">Դադար</string>
+    <string name="stopwatch_reset">Նորից</string>
+
+    <string name="timer_cancel">Չեղարկել</string>
+    <string name="timer_repeat">Կրկին</string>
+
+    <string name="countdown_set">Սահմանել</string>
+
+    <string name="steps">Քայլեր</string>
+
+    <string name="imei">IMEI</string>
+    <string name="imsi">IMSI</string>
+    <string name="iccid">ICCID</string>
+    <string name="add_friend">Ավելացնել ընկեր</string>
+    <string name="imei_error">Մուտքագրել IMEI!</string>
+
+    <string name="onboard1">Իմանալ ավելին Ձեր նոր ժամացույցի մասին</string>
+    <string name="onboard2">Անցնել ձախ՝ բոլոր հավելվածները տեսնելու համար</string>
+    <string name="onboard3">Սեղմեք ներևի ◯\-ին՝ վերադառնալու համար</string>
+    <string name="onboard4">Սեղմեք միացնելու/անջատելու համար</string>
+    <string name="onboard34">Ծանոթացեք Ձեր նոր ժամացույցին</string>
+    <string name="onboardingf1">Իմանալ ավելին Ձեր նոր ժամացույցի մասին</string>
+    <string name="onboardingf2">Անցնել ձախ՝ բոլոր հավելվածները տեսնելու համար</string>
+    <string name="onboardingf3">Ծանոթացեք Ձեր ժամացույցին</string>
+    <string name="onboardingf4">Արտակարգ իրավիճակների դեպքում սեղմեք միացման կոճակը 2 անգամ</string>
+    <string name="onboardingf5">Հիմա տեսնենք՝ ինչ տվյալներ ունեք</string>
+    <string name="take_tour">Ծանոթանալ</string>
+    <string name="Check_for_data">Ստուգել տվյալները</string>
+    <string name="camera">Տեսախցիկ</string>
+    <string name="back">Հետ</string>
+    <string name="power">Միացնել</string>
+    <string name="onboard5">Հիմա տեսնենք՝ ինչ տվյալներ ունեք</string>
+    <string name="onboard_button1">Հաջորդը</string>
+    <string name="onboard_button5">Հաջորդը</string>
+    <string name="onboard_button10">Հաջորդը</string>
+    <string name="onboard_button12">Հաճախորդների սպասարկում</string>
+    <string name="onboard_activate_sim_0">Ակտիվացրեք SIM քարտը COSMO: Mission Control հավելվածից</string>
+    <string name="onboard_activate_sim_1">Ակտիվացրեք SIM քարտը uKid2 հավելվածից</string>
+
+    <string name="onboard_download_app">Սքանավորեք՝ հավելվածը ներբերռնելու համար</string>
+    <string name="onboard_instructions_0">Հետևեք COSMO: Mission Control հավելվածի ցուցումներին</string>
+    <string name="onboard_instructions_1">Հետևեք uKid2 հավելվածի ցուցումներին</string>
+
+    <string name="parent_app_link">https://cosmotogether.com/pages/mission-control-app-download</string>
+    <string name="parent_app_link_ucom">http://ucom.am/ukid</string>
+    <string name="searching_sim">Ակտիվացված SIM քարտի որոնում…</string>
+    <string name="please_wait">Սա որոշ ժամանակ կպահանջի</string>
+
+
+    <string name="settings" >Կարգավորումներ</string>
+    <string name="prefs_update">Թարմացում</string>
+    <string name="prefs_wifi">Wi-Fi</string>
+    <string name="prefs_device">Սարք</string>
+    <string name="prefs_pair">Կցել սարքը</string>
+    <string name="prefs_support">Հաճախորդների սպասարկում</string>
+    <string name="prefs_about">Մեր մասին</string>
+    <string name="prefs_more">Ավելին</string>
+
+    <string name="prefs_language">Լեզու</string>
+    <string name="prefs_brightness">Էկրանի լուսավորություն</string>
+    <string name="prefs_volume">Բարձրություն</string>
+    <string name="prefs_sounds" >Մեղեդի</string>
+    <string name="prefs_sounds_and_volumes">Մեղեդի և բարձրություն</string>
+    <string name="prefs_select_language">Ընտրել լեզուն</string>
+    <!-- Languages should only be displayed in their language
+
+    <string name="lang_en">Անգելերեն</string>
+    <string name="lang_sl">Սլովեներեն</string>
+    <string name="lang_hy">Հայերեն</string>
+    -->
+    <string name="prefs_timezone">Ժամային գոտի</string>
+    <string name="prefs_auto_timezone">Սահմանել ավտոմատ ժամային գոտի</string>
+    <string name="prefs_hr24">Սահմանել 24-ժամային ձևաչափ</string>
+    <string name="prefs_clock" >Ժամացույցի ձևաչափը</string>
+    <string name="prefs_emergency_contact">Միացնել 911 զանգի հնարավորությունը</string>
+    <string name="prefs_emergency_calling" >Արտակարգ համար</string>
+    <string name="prefs_set_ringtone" >Զանգ</string>
+    <string name="prefs_call_network" >Ցանցի ռեժիմ</string>
+    <string name="prefs_ring_volume" >Զանգի բարձրությունը</string>
+    <string name="prefs_call_volume" >Զանգի բարձրությունը</string>
+    <string name="prefs_notification_volume" >Ծանուցման բարձրությունը</string>
+    <string name="prefs_notification" >Ծանուցում</string>
+    <string name="prefs_alarm_volume" >Զարթուցիչի բարձրությունը</string>
+    <string name="prefs_media_volume" >Մեդիայի բարձրությունը</string>
+
+    <string name="prefs_mute_sounds" >Անձայն</string>
+    <string name="prefs_vibrate" >Վիբրացիա</string>
+
+    <string name="very_bright" >Շատ վառ</string>
+    <string name="bright" >Վառ</string>
+    <string name="normal" >Նորմալ</string>
+    <string name="dim" >Մութ</string>
+    <string name="very_dim" >Շատ մութ</string>
+
+    <string name="enter_pwd">Մուտքագրել գաղտնաբառը</string>
+    <string name="confirm">Հաստատել</string>
+    <string name="next">Հաջորդը</string>
+    <string name="close">Փակել</string>
+    <string name="updates_avilable_text">Մինչ կցելն անհրաժեշտ է թարմացնել սարքը</string>
+    <string name="pair_info_0">Բացեք COSMO: Mission Control հավելվածը և կցեք սարքը</string>
+    <string name="pair_info_1">Բացեք uKid2 հավելվածը և կցեք սարքը</string>
+    <string name="connecting">Կապ կենտրոնակայանի հետ…</string>
+    <string name="checking_connection">Կապի ստուգում…</string>
+    <string name="network_unavailable">Ցանցն անհասանելի է</string>
+    <string name="pair_success">Սարքը հաջողությամբ կցվել է</string>
+    <string name="verification_code">Հաստատման կոդ</string>
+    <string name="firmware_version">Ներքին ծրագրային տարբերակ</string>
+    <string name="software_version">"Ծրագրային տարբերակ</string>
+    <string name="boot_version">Boot-ի տարբերակ</string>
+    <string name="support_timeout">Սպասվածից երկար է տևում։\n
+
+ Խնդրում ենք վերագործարկել սարքը և փորձել կրկին։ Եթե խնդիրը չի շտկվում, խնդրում ենք կապվել հաճախորդների սպասարկման կենտրոնի հետ</string>
+    <string name="support_number_text">Հաճախորդների սպասարկման կենտրոնի հեռախոսահամարը</string>
+    <string name="support_number">444</string>
+    <string name="watch_number_text">Ժամացույցի համարը</string>
+    <string name="send_logs">Ուղարկել գրանցումների մատյանները</string>
+    <string name="checking_updates">Թարմացումներն ստուգվում են</string>
+    <string name="update_now">Թարմացնել հիմա</string>
+    <string name="update_available">Թարմացումը հասանելի է</string>
+    <string name="up_to_date">Թարմացված է</string>
+    <string name="enable_wifi">Միացնել Wi-Fi-ը</string>
+    <string name="disable_wifi">Անջատել Wi-Fi-ը</string>
+    <string name="wifi_failed_connection">Կապ չհաստատվեց։ Գուցե գաղտնաբառը սխա՞լ է։</string>
+    <string name="no_contacts">Որևէ կոնտակտ հայտնաբերված չէ։ Խնդրում ենք կցել Ձեր ժամացույցը՝ կոնտակտներ ավելացնելու համար</string>
+    <string name="offline_alert">Սարքը ցանցից դուրս է.\nԽնդրում ենք փորձել ավելի ուշ.</string>
+    <string name="no_mqtt_alert">Սարքը հավելվածին կցելիս խնդիր առաջացավ։ Խնդրում ենք ապակցել այն և կցել կրկին։</string>
+    <string name="diagnostics">Ստուգում</string>
+    <string name="log_status">Գրանցումների կարգավիճակը</string>
+    <string name="log_status_running">Գրանցումների մատյանները հավաքագրվում են</string>
+    <string name="log_status_stopped">Վերջին գրանցումը՝ </string>
+    <string name="log_status_na">N/A</string>
+    <string name="log_start">Սկսել գրանցումները</string>
+    <string name="log_delete">Ջնջել բոլոր գրանցումները</string>
+    <string name="logs_deleted">Գրանցումները ջնջված են</string>
+    <string name="apn">APN</string>
+    <string name="no_apn"> APN հայտնաբերված չէ.</string>
+    <string name="connection_status">Կապի կարգավիճակը</string>
+    <string name="no_calls">Զանգեր հայտնաբերված չեն</string>
+    <string name="calling">Զանգ</string>
+    <string name="stop_calling">Դադարեցնել զանգը</string>
+
+
+    <string name="ok">Շատ լավ</string>
+    <string name="cancel">Չեղարկել</string>
+
+    <string name="alert_unpair_device">Մինչ շարունակելը խնդրում ենք ապակցել սարքը </string>
+    <string name="school_mode">Դասարանային ռեժիմ</string>
+
+    <string name="new_message">Նոր հաղորդագրություն</string>
+    <string name="missed_call">Բաց թողնված զանգ</string>
+    <string name="call">Զանգ</string>
+    <string name="view">Դիտել</string>
+
+    <string name="send">Ուղարկել</string>
+
+    <string name="internet_status_google">Ինտերնետ</string>
+    <string name="internet_status_smartcom">Սերվեր</string>
+    <string name="device_status_paired">Կցված է</string>
+
+    <string name="forget">Չեղարկել</string>
+
+    <string name="today">Այսօր</string>
+    <string name="yesterday">Երեկ</string>
+    <string name="days_ago">Օրեր առաջ</string>
+    <string name="day_ago">օր առաջ</string>
+
+    <string name="storage_management">Հիշողության կառավարում</string>
+    <string name="storage_management_photo">Նկար</string>
+    <string name="storage_management_video">Հոլովակ</string>
+    <string name="storage_management_audio">Ձայնագրություն</string>
+    <string name="storage_management_log">Գրանցումների մատյան</string>
+    <string name="storage_management_other">Այլ</string>
+    <string name="storage_management_free">Ազատ</string>
+
+    <string name="type_new_message">Գրել հաղորդագրություն</string>
+
+    <string name="title_app_launcher">Իմ հավելվածները</string>
+
+    <string name="soundrecorder_title">Ձայնագրություն</string>
+    <string name="soundrecorder_hint_record">Սեղմել ձայնագրելու համար</string>
+    <string name="soundrecorder_hint_stop">Սեղմել դադարեցնելու համար</string>
+    <string name="soundrecorder_hint_play">Սեղմել սկսելու համար</string>
+    <string name="soundlist_title">Ձայնագրություններ</string>
+    <string name="soundlist_new">Նոր ձայնագրություն</string>
+    <string name="soundlist_from">X-ից</string>
+    <string name="soundlist_by_you">Քեզնից</string>
+
+    <string name="alert_alarm">Զարթուցիչ</string>
+    <string name="alert_storage_space">Հիշողություն</string>
+    <string name="alert_storage_space_uh">UH OHH!</string>
+    <string name="alert_storage_space_detail">Հիշողությունը բավարար չէ ֆայլերը պահպանելու համար</string>
+    <string name="alert_storage_space_free">Ազատել հիշողությունը</string>
+    <string name="alert_new_message">Նոր հաղորդագրություն</string>
+    <string name="alert_new_messages">Նոր հաղորդագրություններ</string>
+    <string name="alert_missed_call">Բաց թողնված զանգ</string>
+    <string name="alert_missed_calls">Բաց թողնված զանգեր</string>
+    <string name="alert_no_sim_title">SIM քարտը չի հայտնաբերվել</string>
+    <string name="alert_no_sim">SIM քարտ չի հայտնաբերվել</string>
+    <string name="alert_no_sim_detail">Տեղադրել SIM քարտը կամ ստուգել՝ արդյո՞ք այն ճիշտ է տեղադրված</string>
+    <string name="alert_no_sim_restart">Վերագործարկել ժամացույցը</string>
+    <string name="alert_low_battery">Մարտկոցի լիցքը ցածր է</string>
+    <string name="alert_low_battery_detail">Շուտով անհրաժեշտ կլինի լիցքավորել մարտկոցը</string>
+    <string name="alert_no_signal">Բջջային կապը խափանված է</string>
+    <string name="alert_no_wifi">Կապը խափանված է</string>
+    <string name="alert_no_wifi_title">Ցանցից դուրս</string>
+    <string name="alert_no_wifi_settings">Wi-Fi կարգավորումներ</string>
+    <string name="alert_emergency_call">Արտակարգ դեպք</string>
+    <string name="alert_emergency_call_detail">Եթե սա արտակարգ դեպք է, կապվեք ոստիկանության հետ.</string>
+    <string name="alert_emergency_call_action">Զանգել ոստիկանություն</string>
+    <string name="alert_delete">Վստա՞հ եք</string>
+    <string name="alert_delete_title">Ջնջել ֆայլը</string>
+    <string name="alert_delete_detail">Այն կհեռացվի ընդմիշտ</string>
+    <string name="alert_no_mqtt_title">Կապի խնդիր</string>
+    <string name="alert_no_mqtt">Չի կապվում</string>
+    <string name="alert_no_mqtt_text">Ստուգեք ինտերնետ կապը կամ վերագործարկեք ժամացույցը</string>
+    <string name="alert_no_mqtt_restart">Վերագործարկել ժամացույցը</string>
+    <string name="alert_no_mqtt_support">Ստուգել կապը</string>
+    <string name="alert_no_sos_title">SOS ազդանշանի սխալ</string>
+    <string name="alert_no_sos"> SOS ազանշանը չի ուղարկվում</string>
+    <string name="alert_no_sos_text">SOS ազդանշանն ուղարկելուց առաջ անհրաժեշտ է կցել սարքը.</string>
+    <string name="alert_show_qr_code">Ցուցադրել կցման QR կոդը</string>
+    <string name="alert_message_failed_title">Հաղորդագրության սխալ</string>
+    <string name="alert_message_failed">Հաղորդագրությունը չուղարկվեց</string>
+    <string name="alert_message_failed_text">Ձեր հաղորդագրությունը չի ուղարկվել։ Խնդրում ենք փորձել ավելի ուշ</string>
+
+    <string name="add_buddy_text">Ասա ընկերոջդ, որ ավելացնի քեզ.</string>
+    <string name="searching">Որոնում</string>
+    <string name="your_buddy">Նա Ձեր ընկե՞րն է</string>
+
+    <string name="restart_on_qr">8-անիշ կոդ չստանալու դեպքում, վերագործարկեք սարքը.</string>
+
+
+    <string name="about_info_0">COSMO Technologies, Inc.\n\n
+    Հասցե:\n
+    747 Grape St\n
+    Denver, CO 80220, USA\n\n
+    Հեռախոս:\n (877) 215-4741\n\n
+    Կայք:\n www.cosmotogether.com\n\n
+    Էլ․ փոստ:\n  support@cosmotogether.com\n\n
+        <!--Designed in the U.S,\n Made in China\n-->
+		</string>
+    <string name="about_info_1">uKid, Inc.\n\n
+    Հասցե:\n
+    Դավիթ Անհաղթ 8/4\n
+    Երևան 0069\n\n
+    Հեռախոս:\n (+374) 11 400 400\n\n
+    Կայք:\n www.ucom.am\n\n
+    Էլ․ փոստ:\n  info@ucom.am\n\n
+        <!--Designed in the U.S,\n Made in China\n-->
+    </string>
+
+    <string name="prefs_call_media_volume">Զանգ/Մեդիա</string>
+    <string name="message">Հաղորդագրություն</string>
+    <string name="phone_number">Հեռախոսահամար</string>
+    <string name="file">Ֆայլ</string>
+    <string name="selected_file">Ընտրված ֆայլ՝</string>
+    <string name="message_received_from">Հաղորդագրությունը ստացվել է x-ից</string>
+    <string name="attached_files">Կցված ֆայլեր՝</string>
+    <string name="save_files">Պահպանված ֆայլեր՝</string>
+    <string name="checking_dot_dot_dot">Ստուգվում է...</string>
+    <string name="exit">Ելք</string>
+
+    <string name="prefs_auto_select">Ավտոմատ</string>
+    <string name="prefs_select_timezone">Ընտրեք ժամային գոտին</string>
+    <string name="prefs_clock12">12-ժամյա</string>
+    <string name="prefs_clock24">24-ժամյա</string>
+    <string name="prefs_show">Ցույց տալ</string>
+    <string name="prefs_show_emergency">Արտակարգ զանգը հասանելի կլինի զանգերի հավելվածում</string>
+    <string name="prefs_hide">Թաքցնել</string>
+    <string name="prefs_hide_emergency">Արտակարգ զանգերը չեն երևա զանգերի հավելվածում</string>
+    <string name="prefs_optimized">Օպտիմիզացված է</string>
+
+    <string name="alert_no_contacts_title">Կոնտակտներ չկան</string>
+    <string name="alert_no_contacts">Կոնտակտներ չկան</string>
+    <string name="alert_no_contacts_text">Եթե սարքը կցված է, վերագործարկեք: Եթե ոչ, կցեք այն</string>
+    <string name="alert_no_contacts_pair">Կցել ժամացույցը</string>
+    <string name="device_settings">Սարքի կարգավորումներ</string>
+
+    <string name="very_loud">Շատ բարձր</string>
+    <string name="loud">Բարձր</string>
+    <string name="quiet">Ցածր</string>
+    <string name="mute">Անձայն</string>
+
+    <string name="phone_status_calling">Կատարվում է զանգ</string>
+    <string name="phone_status_ringing">Զանգում է </string>
+    <string name="phone_status_in_call">Զանգն ընթացքի մեջ է</string>
+    <string name="phone_status_empty"></string>
+    <string name="no_media">Տվյալներ առկա չեն</string>
+    <string name="no_media_label">Լուսանկարեք՝ այստեղ ցուցադրելու համար</string>
+    <string name="device_muted">Սարքի ձայնը անջատված է</string>
+    <string name="call_history">Զանգերի պատմություն</string>
+    <string name="standard">Ստանդարտ</string>
+    <string name="powerOff">Անջատել</string>
+    <string name="restart">Վերագործարկել</string>
+    <string name="time_is_up">Ժամանակը սպառվեց</string>
+    <string name="infinity">Անսահմանություն</string>
+    <string name="error">Սխալ</string>
+    <string name="emoji_text">Էմոջի տեքստ</string>
+    <string name="message_uploading">Խնդրում ենք սպասել. Ձեր հաղորդագրությունը դեռ ուղարկվում է: Եթե ​​հիմա դուրս գաք, այն կարող է կորչել:</string>
+    <string name="wait">Սպասեք</string>
+
+</resources>

@@ -1,4 +1,1236 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="custom_text">Loading</string>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+    <!--________DON'T TRANSLATE________-->
+    <string name="app_name">Cosmo</string>
+    <!--_______________________________-->
+
+    <string name="partner_name">Cosmo</string>
+
+    <string name="module_phone">Phone</string>
+    <string name="module_message">Messages</string>
+    <string name="module_contacts">Contacts</string>
+    <string name="module_friends">Friends</string>
+    <string name="module_camera">Camera</string>
+    <string name="module_gallery">Gallery</string>
+    <string name="module_recorder">Recorder</string>
+    <string name="module_record">Record</string>
+    <string name="module_alarm">Alarm</string>
+    <string name="module_stopwatch">Stopwatch</string>
+    <string name="module_timer">Timer</string>
+    <string name="module_calculator">Calculator</string>
+    <string name="module_calendar">Calendar</string>
+    <string name="module_qr">QR</string>
+    <string name="module_steps">Steps</string>
+    <string name="module_setup">Setup</string>
+    <string name="module_partner_tools">P. Tools</string>
+    <string name="module_flashlight">Flashlight</string>
+    <string name="module_game2048">Game 2048</string>
+    <string name="module_magiccamera">Magic Camera</string>
+    <string name="module_themes">Themes</string>
+
+    <string name="preference_title_startup_color">Spaceship color</string>
+    <string name="preference_title_startup_color_blue">Blue</string>
+    <string name="preference_title_startup_color_pink">Pink</string>
+    <string name="preference_title_startup_color_teal">Teal</string>
+
+    <string name="preference_title_background">Background</string>
+    <string name="preference_title_manage_device">Manage Device</string>
+
+    <string name="preference_title_wifi_settings">Wi-Fi settings</string>
+    <string name="preference_title_keyboard_settings">Keyboard settings</string>
+    <string name="preference_title_upgradeversion">SW Update</string>
+    <string name="preference_title_version">Version</string>
+    <string name="preference_title_version_app">App v.</string>
+    <string name="preference_title_version_boot">Boot v.</string>
+    <string name="preference_title_partner_tools">Engineering Tools</string>
+    <string name="preference_title_demos">Demos</string>
+    <string name="preference_title_truetext">TrueText</string>
+    <string name="preference_title_walkietalkie">WalkieTalkie</string>
+    <string name="preference_title_sipcall">SIP call</string>
+    <string name="preference_title_sipclient">SIP client test</string>
+    <string name="preference_title_system_settings">System settings</string>
+    <string name="preference_title_connectivity_status">Connectivity status</string>
+    <string name="preference_title_ota_test">Internet test</string>
+    <string name="preference_title_logcat">Logcat</string>
+    <string name="preference_title_logcat_start">Start logcat</string>
+    <string name="preference_title_logcat_stop">Stop logcat</string>
+    <string name="preference_title_logcat_status">Status:</string>
+    <string name="logcat_status_running">running</string>
+    <string name="logcat_status_stopped">stopped</string>
+    <string name="preference_title_logcat_start_onboot">Log at start</string>
+    <string name="preference_title_sos">SOS</string>
+    <string name="preference_title_fwota">FW Update</string>
+    <string name="preference_title_onboarding">Show Onboarding</string>
+    <string name="preference_title_lanugage_startup">Show Startup Lang.</string>
+    <string name="preference_title_switch_to_ucom">Switch to UCom</string>
+    <string name="preference_title_switch_to_cosmo">Switch to Cosmo</string>
+    <string name="preference_title_production_server">Use production server</string>
+    <string name="preference_title_engineermode">Engineer Mode</string>
+    <string name="preference_title_firststart">Enable Setup Flow</string>
+    <string name="preference_title_firststart_partner">Enable Lang Picker</string>
+    <string name="preference_title_partner_test">Enable Partner Test</string>
+    <string name="preference_title_switch_prodqa">Switch QA/PROD</string>
+    <string name="preference_title_show_dialer_keypad">Show Keypad</string>
+    <string name="preference_title_send_acra">Send crash reports</string>
+    <string name="preference_title_functional_log">Enable Func Log</string>
+    <string name="preference_title_mqtt">MQTT</string>
+    <string name="preference_title_mqtt_fallback">Fallback mode</string>
+    <string name="preference_title_mqtt_fallback_switch">Switch to Fallback</string>
+    <string name="preference_title_crash_device">Crash device</string>
+
+    <string name="preference_title_gps">GPS location</string>
+    <string name="gps_lat">Latitude</string>
+    <string name="gps_long">Longitude</string>
+    <string name="gps_waiting">Waiting for location ...</string>
+    <string name="gps_error">GPS error</string>
+
+    <string name="preference_title_qr">Pair Device</string>
+    <string name="preference_title_send_functional_log">Send Functional Log</string>
+    <string name="preference_title_restart_app">Restart app</string>
+
+    <string name="preference_title_cpuinfo">CPU Info</string>
+
+    <string name="connectivity_connection">Current connection</string>
+    <string name="connectivity_wifi">Wi-Fi connection</string>
+    <string name="connectivity_wifi_off">Wi-Fi off</string>
+    <string name="connectivity_cellular">Cellular connection</string>
+    <string name="connectivity_cellular_sim_problem">SIM problem</string>
+    <string name="connectivity_signal_level">Signal level</string>
+    <string name="connectivity_signal_level_none">None or unknown</string>
+    <string name="connectivity_signal_level_poor">Poor</string>
+    <string name="connectivity_signal_level_moderate">Moderate</string>
+    <string name="connectivity_signal_level_good">Good</string>
+    <string name="connectivity_signal_level_great">Great</string>
+    <string name="connectivity_mqtt">MQTT connection</string>
+
+    <string name="error_module_not_installed">Module not installed!</string>
+
+    <string name="alarm">ALARM</string>
+    <string name="alarm_alarms">Alarms</string>
+    <string name="alarm_stopwatch">Stopwatch</string>
+    <string name="alarm_countdown">Timer</string>
+
+    <string name="alarm_message">Message</string>
+    <string name="alarm_save">Save</string>
+    <string name="alarm_new">Add alarm</string>
+    <string name="alarm_remove">X</string>
+    <string name="alarm_error">Error!</string>
+    <string name="alarm_schoolmode">School mode</string>
+    <string name="alarm_schoolmode_start">Starts in %d minutes.</string>
+    <string name="alarm_schoolmode_start_1">Starts in %d minute.</string>
+    <string name="alarm_schoolmode_end">Ended now.</string>
+
+    <string name="stopwatch_start">Start</string>
+    <string name="stopwatch_stop">Stop</string>
+    <string name="stopwatch_reset">Reset</string>
+
+    <string name="timer_cancel">Cancel</string>
+    <string name="timer_repeat">Repeat</string>
+
+    <string name="countdown_set">Set</string>
+
+    <string name="steps">Steps</string>
+
+    <string name="imei">IMEI</string>
+    <string name="imsi">IMSI</string>
+    <string name="iccid">ICCID</string>
+    <string name="add_friend">Add Friend</string>
+    <string name="imei_error">Enter IMEI!</string>
+    <string name="save_buddy">Save Buddy</string>
+
+    <string name="onboard1">Learn about\nyour new watch</string>
+    <string name="onboard2">Swipe left to see\nall your apps</string>
+    <string name="onboard3">Tap the ◯\nbelow to go back</string>
+    <string name="onboard4">Press to\nturn off/on</string>
+    <string name="onboard34">Get to know\nyour watch!</string>
+    <string name="onboardingf1">Learn about your\nnew watch from</string>
+    <string name="onboardingf2">Swipe to see apps</string>
+    <string name="onboardingf3">Watch buttons</string>
+    <string name="onboardingf4">Press power 2 times\nfor emergencies</string>
+    <string name="onboardingf5">Now let\'s check to see if you have data!</string>
+    <string name="take_tour">Take a tour</string>
+    <string name="Check_for_data">Check for data</string>
+    <string name="camera">Camera</string>
+    <string name="back">Back</string>
+    <string name="power">Power/Restart</string>
+    <string name="power81">Power</string>
+    <string name="onboard5">Now let\'s check to see if you have data!</string>
+    <string name="onboard_button1">Next</string>
+    <string name="onboard_button5">Next</string>
+    <string name="onboard_button10">Next</string>
+    <string name="onboard_button12">Support</string>
+    <string name="onboard_activate_sim_0">Activate SIM from COSMO: Mission Control app</string>
+    <string name="onboard_activate_sim_1">Activate SIM from uKid2 app</string>
+
+    <string name="onboard_download_app">Scan to get app</string>
+    <string name="onboard_instructions_0">Follow instructions in the Cosmo: Mission Control app</string>
+    <string name="onboard_instructions_1">Follow instructions in the uKid2 app</string>
+
+    <string name="parent_app_link">https://cosmotogether.com/pages/mission-control-app-download</string>
+    <string name="parent_app_link_ucom">http://ucom.am/ukid</string>
+    <string name="searching_sim">Searching for activated SIM...</string>
+    <string name="please_wait">This will take a moment</string>
+
+    <string name="settings">Settings</string>
+    <string name="prefs_update">Update</string>
+    <string name="prefs_wifi">Wi-Fi</string>
+    <string name="prefs_device">Device</string>
+    <string name="prefs_pair">Pair device</string>
+    <string name="prefs_support">Support</string>
+    <string name="prefs_about">About</string>
+    <string name="prefs_more">More</string>
+
+    <string name="prefs_gestures">Gestures</string>
+    <string name="prefs_wea">WEA messages</string>
+    <string name="prefs_language">Language</string>
+    <string name="prefs_brightness">Screen brightness</string>
+    <string name="prefs_fontsize">Font size</string>
+    <string name="prefs_volume">Volume</string>
+    <string name="prefs_sounds">Sounds</string>
+    <string name="prefs_vibration">Vibration</string>
+    <string name="prefs_sounds_and_volumes">Sounds and vibration</string>
+    <string name="prefs_select_language">Select language</string>
+    <!-- Languages should only be displayed in their language
+
+    <string name="lang_en">English</string>
+    <string name="lang_sl">Slovenian</string>
+    -->
+    <!-- Armenian is only language not getting picked from the system (for now) -->
+    <string name="lang_hy">Հայերեն</string>
+
+    <string name="prefs_screen_timeout">Screen timeout</string>
+    <string name="prefs_screen_timeout_15">15 seconds</string>
+    <string name="prefs_screen_timeout_30">30 seconds</string>
+    <string name="prefs_screen_timeout_60">1 minute</string>
+
+    <string name="prefs_time">Time</string>
+    <string name="prefs_timezone">Time zone</string>
+    <string name="prefs_auto_timezone">Set automatic time zone</string>
+    <string name="prefs_hr24">Set 24 hour format</string>
+    <string name="prefs_clock">Clock format</string>
+    <string name="prefs_call">Call options</string>
+    <string name="prefs_emergency_contact">Enable 911 calling</string>
+    <string name="prefs_emergency_calling">Emergency calling</string>
+    <string name="prefs_set_ringtone">Ringtone</string>
+    <string name="prefs_call_network">Call network</string>
+    <string name="prefs_ring_volume">Ring volume</string>
+    <string name="prefs_call_volume">Call volume</string>
+    <string name="prefs_call_media_volume">Call/media vol.</string>
+    <string name="prefs_notification_volume">Notification vol.</string>
+    <string name="prefs_notification">Notification</string>
+    <string name="prefs_alarm_volume">Alarm volume</string>
+    <string name="prefs_media_volume">Media volume</string>
+    <string name="prefs_taps_volume">Taps volume</string>
+
+    <string name="prefs_mute_sounds">Mute sounds</string>
+    <string name="prefs_mute_sounds_note">Unmute to change settings below.</string>
+    <string name="prefs_vibrate">Vibrate</string>
+    <string name="prefs_vibrate_calls">Incoming calls</string>
+    <string name="prefs_vibrate_calls_note">Your watch will gently vibrate when you receive a call.</string>
+    <string name="prefs_vibrate_taps">Taps</string>
+    <string name="prefs_vibrate_taps_note">Your watch will gently vibrate when you tap the screen.</string>
+    <string name="prefs_vibrate_notifications">Notifications</string>
+    <string name="prefs_vibrate_notifications_note">Your watch will gently vibrate when you receive alarms or notifications.</string>
+
+    <string name="very_bright">Very bright</string>
+    <string name="bright">Bright</string>
+    <string name="normal">Normal</string>
+    <string name="dim">Dim</string>
+    <string name="very_dim">Very dim</string>
+
+    <string name="prefs_display">Display</string>
+    <string name="prefs_charging_screen">Charging display</string>
+    <string name="screen_clock">Show clock</string>
+    <string name="screen_off">No clock</string>
+
+    <string name="smaller">Smaller</string>
+    <string name="bigger">Bigger</string>
+    <string name="example_msg_1">This is how big text messages will be.</string>
+    <string name="example_msg_2">I love my watch!</string>
+
+    <string name="customize">Customize</string>
+    <string name="wallpapers">Wallpapers</string>
+    <string name="clocks">Clocks</string>
+
+    <string name="enter_pwd">Enter password</string>
+    <string name="confirm">Confirm</string>
+    <string name="next">Next</string>
+    <string name="close">Close</string>
+    <string name="updates_avilable_text">Your watch needs to update before pairing.</string>
+    <string name="update">UPDATE</string>
+    <string name="update_goodies">Getting ready for\nsome new goodies!</string>
+    <string name="pair_info_0">Open the COSMO: Mission Control app to pair your device.</string>
+    <string name="pair_info_1">Open the uKid2 app to pair your device.</string>
+    <string name="connecting">Connecting to\nBase Station...</string>
+    <string name="checking_connection">Checking connection...</string>
+    <string name="network_unavailable">Network unavailable</string>
+    <string name="pair_success">Device paired\nsuccessfully</string>
+    <string name="pair_already">Device is\nalready paired.</string>
+    <string name="verification_code">Verification code</string>
+    <string name="firmware_version">Firmware version</string>
+    <string name="software_version">Software version</string>
+    <string name="boot_version">Boot version</string>
+    <string name="support_timeout">This is taking longer than expected. Please note:\n
+- Your device data plan can take up to 30 mins before it is activated\n
+- Please restart your device and try again\nIf the issue persists, contact support for assistance.</string>
+    <string name="support_number_text">Support phone number</string>
+    <string name="support_number">1 (877) 215-4741</string>
+    <string name="watch_number_text">Watch mobile number</string>
+    <string name="send_logs">Send logs</string>
+    <string name="checking_updates">Checking for updates...</string>
+
+    <string name="update_now">Update now</string>
+    <string name="update_later">Update later</string>
+    <string name="update_available">UPDATE FOUND</string>
+    <string name="up_to_date">Up to date.</string>
+    <string name="up_to_date2">YOUR WATCH IS\nUP TO DATE!</string>
+
+    <string name="enable_wifi">Enable Wi-Fi</string>
+    <string name="disable_wifi">Disable Wi-Fi</string>
+    <string name="wifi_failed_connection">Connection failed. Maybe wrong password.</string>
+    <string name="no_contacts">No contacts found.\nPlease pair your watch to add contacts.</string>
+    <string name="offline_alert">Device is offline.\nTry again later.</string>
+    <string name="no_mqtt_alert">Oops! Problem connecting with app. Remove device from app and pair again.</string>
+    <string name="diagnostics">Diagnostics</string>
+    <string name="log_status">Log service status</string>
+    <string name="log_status_running">Collecting log</string>
+    <string name="log_status_stopped">Last log: </string>
+    <string name="log_status_na">N/A</string>
+    <string name="log_start">Start Logging</string>
+    <string name="log_delete">Delete All Logs</string>
+    <string name="logs_deleted">Logs deleted.</string>
+    <string name="apn">APN</string>
+    <string name="no_apn">No APN value found.</string>
+    <string name="connection_status">Connection status</string>
+    <string name="no_calls">No calls found</string>
+    <string name="calling">Calling</string>
+    <string name="stop_calling">Stop calling</string>
+
+
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+
+    <string name="alert_unpair_device">Please unpair device before proceeding!</string>
+    <string name="school_mode">School Mode</string>
+
+    <string name="unread_messages">unread messages</string>
+
+    <string name="new_message">NEW MESSAGE</string>
+    <string name="missed_call">MISSED CALL</string>
+    <string name="call">Call</string>
+    <string name="call_title">Contacts</string>
+    <string name="view">View</string>
+
+    <string name="send">Send</string>
+    <string name="share_with">Share with...</string>
+
+    <string name="internet_status_google">Internet</string>
+    <string name="internet_status_smartcom">Server</string>
+    <string name="device_status_paired">Paired</string>
+    <string name="device_status_mobile_data">Mobile data</string>
+
+    <string name="forget">Forget</string>
+
+    <string name="today">Today</string>
+    <string name="yesterday">Yesterday</string>
+    <string name="days_ago">days ago</string>
+    <string name="day_ago">day ago</string>
+
+    <string name="location_settings">Location Settings</string>
+    <string name="storage_management">Storage management</string>
+    <string name="storage_management_photo">Photo</string>
+    <string name="storage_management_video">Video</string>
+    <string name="storage_management_audio">Audio</string>
+    <string name="storage_management_audio_chat">Chat Audio</string>
+    <string name="storage_management_log">Log</string>
+    <string name="storage_management_other">Other</string>
+    <string name="storage_management_free">Free</string>
+
+    <string name="type_new_message">Type message</string>
+
+    <string name="title_app_launcher">My apps</string>
+
+    <string name="soundrecorder_title">Voice note</string>
+    <string name="soundrecorder_hint_record">Tap to record</string>
+    <string name="soundrecorder_hint_stop">Tap to stop</string>
+    <string name="soundrecorder_hint_play">Tap to play</string>
+    <string name="soundlist_title">Voice notes</string>
+    <string name="soundlist_new">New note</string>
+    <string name="soundlist_from">from</string>
+    <string name="soundlist_by_you">by You</string>
+
+    <string name="alert_alarm">Alarm</string>
+    <string name="alert_storage_space">Storage space</string>
+    <string name="alert_storage_space_uh">UH OHH!</string>
+
+    <string name="alert_fota_title">CosmoWatch Update</string>
+    <string name="alert_successful_memory_cleanup1">%s files successfully removed.</string>
+    <string name="alert_continue_in">Your device will automatically continue in %d seconds.</string>
+    <string name="alert_storage_fota">There’s no more space to download the update.</string>
+    <string name="alert_storage_fota_freeup">Free up %s to continue.</string>
+    <string name="alert_battery_fota_detail">You need 30%% battery to install the update. Current battery level is %d%%.</string>
+    <string name="alert_fota_update_failed">We weren\'t able to\ninstall the update.</string>
+    <string name="alert_fota_download_failed">We weren\'t able to\ndownload the update.</string>
+    <string name="alert_fota_retry_failed">Update failed on retry</string>
+
+    <string name="alert_restart_device_title">Restart Device</string>
+    <string name="alert_restart_device_detail">Your device will now restart.</string>
+
+    <string name="alert_remind_me_later">Remind me later</string>
+    <string name="alert_storage_temp_files">Delete temporary files.</string>
+    <string name="alert_storage_media_files">Delete media files.</string>
+
+    <string name="alert_storage_space_detail">There isn\'t enough space\nto save more files.</string>
+    <string name="alert_storage_space_detail2">Free up</string>
+    <string name="alert_storage_space_detail3">MB to\ncontinue.</string>
+    <string name="alert_storage_space_free">Free up space</string>
+
+    <string name="alert_new_message">New message</string>
+    <string name="alert_new_messages">new messages</string>
+    <string name="alert_missed_call">Missed call</string>
+    <string name="alert_missed_calls">missed calls</string>
+    <string name="alert_no_sim_title">No SIM</string>
+    <string name="alert_no_sim">NO SIM DETECTED</string>
+    <string name="alert_no_sim_detail">Insert SIM card or check\nif it is inserted correctly.</string>
+    <string name="alert_no_sim_restart">Restart watch</string>
+    <string name="alert_low_battery">Low battery</string>
+    <string name="alert_low_battery_main">Charge watch</string>
+    <string name="alert_low_battery_detail">You have %s%% battery left.</string>
+    <string name="alert_no_signal">NO CELL SERVICE</string>
+    <string name="alert_no_wifi">NO CONNECTION</string>
+    <string name="alert_no_wifi_title">Offline</string>
+    <string name="alert_no_wifi_settings">Wi-Fi settings</string>
+    <string name="alert_emergency_call">Emergency</string>
+    <string name="alert_emergency_call_detail">If this is an emergency,\ntalk to the police now.</string>
+    <string name="alert_emergency_call_action">Call the police</string>
+    <string name="alert_delete">ARE YOU SURE?</string>
+    <string name="alert_delete_title">Delete file</string>
+    <string name="alert_delete_detail">It will be gone forever.</string>
+    <string name="alert_no_mqtt_title">Connection Error</string>
+    <string name="alert_no_mqtt">CANNOT CONNECT</string>
+    <string name="alert_no_mqtt_text">Check internet connection\nor restart watch.</string>
+    <string name="alert_no_mqtt_restart">Restart watch</string>
+    <string name="alert_no_mqtt_support">Check connection</string>
+    <string name="alert_no_sos_title">SOS Error</string>
+    <string name="alert_no_sos">CANNOT SEND SOS</string>
+    <string name="alert_no_sos_text">You must first pair your watch to enable SOS.</string>
+    <string name="alert_show_qr_code">Show pairing QR code</string>
+    <string name="alert_message_failed_title">Message Error</string>
+    <string name="alert_message_failed">MESSAGE FAILED</string>
+    <string name="alert_message_failed_text">Your message could not be sent. Try again later.</string>
+    <string name="alert_muted_title">Device muted</string>
+    <string name="alert_muted_detail">Device is muted. If you proceed it will unmute until you return from Volume settings. Continue?</string>
+
+    <string name="add_buddy_text">Tell your buddy to add you at the same time.</string>
+    <string name="searching">Searching</string>
+    <string name="your_buddy">Is this your buddy?</string>
+
+    <string name="restart_on_qr">Restart if 8-digit code does not appear after scanning.</string>
+
+
+    <string name="about_info_0">COSMO Technologies, Inc.\n\n
+Address:\n
+1312 17th Street,\n Suite 450\n
+Denver, CO\n80220,USA\n\n
+Phone:\n (877) 215-4741\n\n
+Website:\n www.cosmotogether.com\n\n
+Support Email:\n support@cosmotogether.com\n\n
+Designed in the U.S,\n Made in China\n</string>
+    <string name="about_info_1">uKid, Inc.\n\n
+    Address:\n
+    Դավիթ Անհաղթ 8/4\n
+    Երևան 0069\n\n
+    Phone:\n (+374) 11 400 400\n\n
+    Website:\n www.ucom.am\n\n
+    Support Email:\n  info@ucom.am\n\n
+        <!--Designed in the U.S,\n Made in China\n--></string>
+
+
+    <string-array name="CountryNumbers">
+        <item>376,AD,112</item>
+        <item>971,AE,999</item>
+        <item>93,AF,119</item>
+        <item>1264,AI,911</item>
+        <item>355,AL,127</item>
+        <item>374,AM,911</item>
+        <item>244,AO,116</item>
+        <item>54,AR,911</item>
+        <item>685,WS,911</item>
+        <item>43,AT,112</item>
+        <item>61,AU,000</item>
+        <item>297,AW,911</item>
+        <item>994,AZ,103</item>
+        <item>5997,BA,124</item>
+        <item>1246,BB,511</item>
+        <item>880,BD,999</item>
+        <item>32,BE,112</item>
+        <item>226,BF,112</item>
+        <item>359,BG,112</item>
+        <item>973,BH,999</item>
+        <item>257,BI,112</item>
+        <item>229,BJ,112</item>
+        <item>1441,BM,911</item>
+        <item>1284,BN,991</item>
+        <item>591,BO,118</item>
+        <item>55,BR,192</item>
+        <item>1242,BS,911</item>
+        <item>975,BT,112</item>
+        <item>267,BW,997</item>
+        <item>375,BY,103</item>
+        <item>501,BZ,911</item>
+        <item>1,CA,911</item>
+        <item>236,CF,1220</item>
+        <item>242,CG,112</item>
+        <item>41,CH,112</item>
+        <item>506,CI,185</item>
+        <item>682,CK,998</item>
+        <item>56,CL,131</item>
+        <item>237,CM,112</item>
+        <item>86,CN,120</item>
+        <item>57,CO,112</item>
+        <item>506,CR,112</item>
+        <item>53,CU,104</item>
+        <item>238,CV,130</item>
+        <item>5999,CW,912</item>
+        <item>357,CY,112</item>
+        <item>90392,CY,112</item>
+        <item>420,CZ,112</item>
+        <item>49,DE,112</item>
+        <item>253,DJ,119</item>
+        <item>45,DK,112</item>
+        <item>1767,DM,999</item>
+        <item>1849,DO,112</item>
+        <item>213,DZ,14</item>
+        <item>593,EC,911</item>
+        <item>372,EE,112</item>
+        <item>20,EG,123</item>
+        <item>84,EH,150</item>
+        <item>291,ER,114</item>
+        <item>34,ES,112</item>
+        <item>251,ET,911</item>
+        <item>358,FI,112</item>
+        <item>679,FJ,911</item>
+        <item>500,FK,999</item>
+        <item>52,FM,911</item>
+        <item>298,FO,112</item>
+        <item>33,FR,112</item>
+        <item>241,GA,1300</item>
+        <item>44,UK,113</item>
+        <item>1473,GD,911</item>
+        <item>995,GE,112</item>
+        <item>594,GF,112</item>
+        <item>233,GH,999</item>
+        <item>350,GI,199</item>
+        <item>299,GL,122</item>
+        <item>220,GM,116</item>
+        <item>224,GN,442020</item>
+        <item>590,GP,15</item>
+        <item>240,GQ,112</item>
+        <item>30,GR,112</item>
+        <item>27,GS,999</item>
+        <item>502,GT,122</item>
+        <item>1671,GU,911</item>
+        <item>245,GW,112</item>
+        <item>592,GY,999</item>
+        <item>852,HK,999</item>
+        <item>504,HN,911</item>
+        <item>385,HR,112</item>
+        <item>509,HT,118</item>
+        <item>36,HU,112</item>
+        <item>62,ID,112</item>
+        <item>353,IE,112</item>
+        <item>972,IL,112</item>
+        <item>91,IN,112</item>
+        <item>964,IQ,122</item>
+        <item>98,IR,112</item>
+        <item>354,IS,112</item>
+        <item>39,IT,112</item>
+        <item>1876,JM,110</item>
+        <item>962,JO,911</item>
+        <item>81,JP,119</item>
+        <item>254,KE,999</item>
+        <item>996,KG,103</item>
+        <item>855,KH,119</item>
+        <item>686,KI,994</item>
+        <item>269,KM,7720373</item>
+        <item>290,KN,911</item>
+        <item>6723,KP,112</item>
+        <item>500,KR,119</item>
+        <item>965,KW,112</item>
+        <item>1345,KY,911</item>
+        <item>77,KZ,112</item>
+        <item>856,LA,195</item>
+        <item>961,LB,140</item>
+        <item>1758,LC,911</item>
+        <item>423,LI,112</item>
+        <item>94,LK,110</item>
+        <item>231,LR,911</item>
+        <item>266,LS,121</item>
+        <item>370,LT,112</item>
+        <item>263,LU,112</item>
+        <item>371,LV,112</item>
+        <item>218,LY,1515</item>
+        <item>212,MA,112</item>
+        <item>377,MC,112</item>
+        <item>373,MD,112</item>
+        <item>382,ME,112</item>
+        <item>1758,MF,912</item>
+        <item>261,MG,124</item>
+        <item>692,MH,911</item>
+        <item>6723,MK,112</item>
+        <item>223,ML,112</item>
+        <item>95,MM,999</item>
+        <item>976,MN,100</item>
+        <item>352,MO,999</item>
+        <item>1670,MP,911</item>
+        <item>263,MQ,15</item>
+        <item>222,MR,101</item>
+        <item>1664,MS,911</item>
+        <item>356,MT,112</item>
+        <item>230,MU,999</item>
+        <item>960,MV,102</item>
+        <item>265,MW,998</item>
+        <item>52,MX,911</item>
+        <item>60,MY,999</item>
+        <item>258,MZ,117</item>
+        <item>264,NA,112</item>
+        <item>687,NC,112</item>
+        <item>227,NE,15</item>
+        <item>6723,NF,999</item>
+        <item>234,NG,112</item>
+        <item>263,NI,118</item>
+        <item>31,NL,112</item>
+        <item>47,NO,113</item>
+        <item>977,NP,112</item>
+        <item>674,NR,111</item>
+        <item>683,NU,999</item>
+        <item>64,NZ,111</item>
+        <item>968,OM,999</item>
+        <item>507,PA,911</item>
+        <item>51,PE,911</item>
+        <item>689,PF,112</item>
+        <item>675,PG,111</item>
+        <item>63,PH,911</item>
+        <item>92,PK,911</item>
+        <item>48,PL,112</item>
+        <item>590,PM,15</item>
+        <item>1939,PR,911</item>
+        <item>970,PS,101</item>
+        <item>351,PT,112</item>
+        <item>680,PW,911</item>
+        <item>595,PY,911</item>
+        <item>974,QA,999</item>
+        <item>262,RE,112</item>
+        <item>40,RO,112</item>
+        <item>381,RS,112</item>
+        <item>7,RU,112</item>
+        <item>250,RW,112</item>
+        <item>966,SA,997</item>
+        <item>677,SB,999</item>
+        <item>248,SC,999</item>
+        <item>249,SD,999</item>
+        <item>46,SE,112</item>
+        <item>65,SG,112</item>
+        <item>247,SH,999</item>
+        <item>290,SH,911</item>
+        <item>386,SI,112</item>
+        <item>421,SK,112</item>
+        <item>232,SL,999</item>
+        <item>378,SM,118</item>
+        <item>221,SN,338891515</item>
+        <item>252,SO,999</item>
+        <item>597,SR,115</item>
+        <item>211,SS,999</item>
+        <item>378,ST,221221</item>
+        <item>503,SV,911</item>
+        <item>963,SY,110</item>
+        <item>372,SZ,977</item>
+        <item>993,TC,911</item>
+        <item>235,TD,22514242</item>
+        <item>228,TG,8200</item>
+        <item>66,TH,911</item>
+        <item>992,TJ,112</item>
+        <item>670,TL,112</item>
+        <item>993,TM,112</item>
+        <item>216,TN,190</item>
+        <item>676,TO,911</item>
+        <item>90,TR,112</item>
+        <item>3735,TT,811</item>
+        <item>688,TV,911</item>
+        <item>886,TW,112</item>
+        <item>255,TZ,112</item>
+        <item>380,UA,112</item>
+        <item>256,UG,999</item>
+        <item>1,US,911</item>
+        <item>598,UY,911</item>
+        <item>998,UZ,103</item>
+        <item>3906698,VA,118</item>
+        <item>508,VT,999</item>
+        <item>58,VE,911</item>
+        <item>1284,VG,999</item>
+        <item>1,VI,911</item>
+        <item>84,VN,115</item>
+        <item>678,VU,112</item>
+        <item>84,WF,15</item>
+        <item>685,WS,999</item>
+        <item>82,XK,112</item>
+        <item>967,YE,191</item>
+        <item>262639,YT,15</item>
+        <item>27,ZA,112</item>
+        <item>260,ZM,112</item>
+        <item>263,ZW,999</item>
+    </string-array>
+
+    <string-array name="CountryCodes">
+        <item>93,AF</item>
+        <item>355,AL</item>
+        <item>213,DZ</item>
+        <item>376,AD</item>
+        <item>244,AO</item>
+        <item>672,AQ</item>
+        <item>54,AR</item>
+        <item>374,AM</item>
+        <item>297,AW</item>
+        <item>61,AU</item>
+        <item>43,AT</item>
+        <item>994,AZ</item>
+        <item>973,BH</item>
+        <item>880,BD</item>
+        <item>375,BY</item>
+        <item>32,BE</item>
+        <item>501,BZ</item>
+        <item>229,BJ</item>
+        <item>975,BT</item>
+        <item>591,BO</item>
+        <item>387,BA</item>
+        <item>267,BW</item>
+        <item>55,BR</item>
+        <item>673,BN</item>
+        <item>359,BG</item>
+        <item>226,BF</item>
+        <item>95,MM</item>
+        <item>257,BI</item>
+        <item>855,KH</item>
+        <item>237,CM</item>
+        <item>1,CA</item>
+        <item>238,CV</item>
+        <item>236,CF</item>
+        <item>235,TD</item>
+        <item>56,CL</item>
+        <item>86,CN</item>
+        <item>61,CX</item>
+        <item>61,CC</item>
+        <item>57,CO</item>
+        <item>269,KM</item>
+        <item>242,CG</item>
+        <item>243,CD</item>
+        <item>682,CK</item>
+        <item>506,CR</item>
+        <item>385,HR</item>
+        <item>53,CU</item>
+        <item>357,CY</item>
+        <item>420,CZ</item>
+        <item>45,DK</item>
+        <item>253,DJ</item>
+        <item>670,TL</item>
+        <item>593,EC</item>
+        <item>20,EG</item>
+        <item>503,SV</item>
+        <item>240,GQ</item>
+        <item>291,ER</item>
+        <item>372,EE</item>
+        <item>251,ET</item>
+        <item>500,FK</item>
+        <item>298,FO</item>
+        <item>679,FJ</item>
+        <item>358,FI</item>
+        <item>33,FR</item>
+        <item>689,PF</item>
+        <item>241,GA</item>
+        <item>220,GM</item>
+        <item>995,GE</item>
+        <item>49,DE</item>
+        <item>233,GH</item>
+        <item>350,GI</item>
+        <item>30,GR</item>
+        <item>299,GL</item>
+        <item>502,GT</item>
+        <item>224,GN</item>
+        <item>245,GW</item>
+        <item>592,GY</item>
+        <item>509,HT</item>
+        <item>504,HN</item>
+        <item>852,HK</item>
+        <item>36,HU</item>
+        <item>91,IN</item>
+        <item>62,ID</item>
+        <item>98,IR</item>
+        <item>964,IQ</item>
+        <item>353,IE</item>
+        <item>44,IM</item>
+        <item>972,IL</item>
+        <item>39,IT</item>
+        <item>225,CI</item>
+        <item>81,JP</item>
+        <item>962,JO</item>
+        <item>7,KZ</item>
+        <item>254,KE</item>
+        <item>686,KI</item>
+        <item>965,KW</item>
+        <item>996,KG</item>
+        <item>856,LA</item>
+        <item>371,LV</item>
+        <item>961,LB</item>
+        <item>266,LS</item>
+        <item>231,LR</item>
+        <item>218,LY</item>
+        <item>423,LI</item>
+        <item>370,LT</item>
+        <item>352,LU</item>
+        <item>853,MO</item>
+        <item>389,MK</item>
+        <item>261,MG</item>
+        <item>265,MW</item>
+        <item>60,MY</item>
+        <item>960,MV</item>
+        <item>223,ML</item>
+        <item>356,MT</item>
+        <item>692,MH</item>
+        <item>222,MR</item>
+        <item>230,MU</item>
+        <item>262,YT</item>
+        <item>52,MX</item>
+        <item>691,FM</item>
+        <item>373,MD</item>
+        <item>377,MC</item>
+        <item>976,MN</item>
+        <item>382,ME</item>
+        <item>212,MA</item>
+        <item>258,MZ</item>
+        <item>264,NA</item>
+        <item>674,NR</item>
+        <item>977,NP</item>
+        <item>31,NL</item>
+        <item>599,AN</item>
+        <item>687,NC</item>
+        <item>64,NZ</item>
+        <item>505,NI</item>
+        <item>227,NE</item>
+        <item>234,NG</item>
+        <item>683,NU</item>
+        <item>850,KP</item>
+        <item>47,NO</item>
+        <item>968,OM</item>
+        <item>92,PK</item>
+        <item>680,PW</item>
+        <item>507,PA</item>
+        <item>675,PG</item>
+        <item>595,PY</item>
+        <item>51,PE</item>
+        <item>63,PH</item>
+        <item>870,PN</item>
+        <item>48,PL</item>
+        <item>351,PT</item>
+        <item>1,PR</item>
+        <item>974,QA</item>
+        <item>40,RO</item>
+        <item>7,RU</item>
+        <item>250,RW</item>
+        <item>590,BL</item>
+        <item>685,WS</item>
+        <item>378,SM</item>
+        <item>239,ST</item>
+        <item>966,SA</item>
+        <item>221,SN</item>
+        <item>381,RS</item>
+        <item>248,SC</item>
+        <item>232,SL</item>
+        <item>65,SG</item>
+        <item>421,SK</item>
+        <item>386,SI</item>
+        <item>677,SB</item>
+        <item>252,SO</item>
+        <item>27,ZA</item>
+        <item>82,KR</item>
+        <item>34,ES</item>
+        <item>94,LK</item>
+        <item>290,SH</item>
+        <item>508,PM</item>
+        <item>249,SD</item>
+        <item>597,SR</item>
+        <item>268,SZ</item>
+        <item>46,SE</item>
+        <item>41,CH</item>
+        <item>963,SY</item>
+        <item>886,TW</item>
+        <item>992,TJ</item>
+        <item>255,TZ</item>
+        <item>66,TH</item>
+        <item>228,TG</item>
+        <item>690,TK</item>
+        <item>676,TO</item>
+        <item>216,TN</item>
+        <item>90,TR</item>
+        <item>993,TM</item>
+        <item>688,TV</item>
+        <item>971,AE</item>
+        <item>256,UG</item>
+        <item>44,GB</item>
+        <item>380,UA</item>
+        <item>598,UY</item>
+        <item>1,US</item>
+        <item>998,UZ</item>
+        <item>678,VU</item>
+        <item>39,VA</item>
+        <item>58,VE</item>
+        <item>84,VN</item>
+        <item>681,WF</item>
+        <item>967,YE</item>
+        <item>260,ZM</item>
+        <item>263,ZW</item>
+    </string-array>
+
+    <string name="message">Message</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="file">File</string>
+    <string name="selected_file">Selected file:</string>
+    <string name="message_received_from">Message received from</string>
+    <string name="attached_files">attached files:</string>
+    <string name="save_files">Save files</string>
+
+    <string-array name="options">
+        <item>MMS</item>
+        <item>BlueToot client</item>
+        <item>BlueToot server</item>
+    </string-array>
+    <string name="press_to_talk">Press to talk</string>
+    <string name="sip_call">Sip Call</string>
+    <string name="viop_managment">Call network</string>
+    <string name="standard">Standard</string>
+    <string name="standard_call_description">Utilizes standard cellular network settings (most common)</string>
+    <string name="standard_call_description2">Unavailable</string>
+    <string name="enhanced_calling">Optimized</string>
+    <string name="enhance_calling_description">Utilizes enhanced network settings for optimized location coverage</string>
+    <string name="see_voip_settings">See VoIP settings</string>
+    <string name="voip_phone_number">VoIP phone number</string>
+    <string name="voip_phone_setup"><![CDATA[Complete the Enhanced calling setup in Device Settings > Device > Call Network]]></string>
+    <string name="voip_phone_setup_error">Something went wrong: \nCode: %d\nMessage: %s</string>
+    <string name="voip_setup_something_wrong">Something went wrong with setting up VoIP.</string>
+    <string name="something_went_wrong">Something\nwent wrong</string>
+    <string name="voip_setup_restart">If your watch has not automatically restarted, you can manually restart the watch.</string>
+    <string name="voip_setup_step_4">Once removed, your watch should restart automatically, and you will be asked to pair your watch again with it\'s new number.</string>
+    <string name="voip_setup_step_3">Tap <annotation style='color:#ffffffff'>Settings</annotation> > <annotation style='color:#ffff4646'>Unpair device</annotation></string>
+    <string name="voip_setup_step_2">Select this watch from the list of devices.</string>
+    <string name="voip_setup_step_1">Navigate to <annotation style='color:#ffffffff'>My devices</annotation> in the Mission Control Parent App.</string>
+    <string name="voip_setup_phone_number">We will need to set up your watch for optimized calling. A new phone number will be given.</string>
+    <string name="checking_dot_dot_dot">Checking...</string>
+    <string name="calling_dot_dot_dot">Calling...</string>
+    <string name="voip_setup_checking_connection">Checking connection</string>
+    <string name="voip_setup_checking_pair_status">Checking pair status</string>
+    <string name="voip_setup_status_unpaired">Device is unpaired</string>
+    <string name="voip_setup_status_paired">Device is paired</string>
+    <string name="voip_setup_setting_up_voip">Setting up VoIP</string>
+    <string name="voip_setup_no_connection_description">Check internet connection or restart watch.</string>
+    <string name="voip_setup_restart_watch">Restart watch</string>
+    <string name="voip_setup_continue_with_setup">Continue with setup</string>
+    <string name="voip_setup_contact_support">Contact support</string>
+    <string name="exit">Exit</string>
+    <string name="voip_setup_success_description">The new phone number for this watch is</string>
+    <string name="voip_setup_success_header">YOUR NEW NUMBER</string>
+    <string name="voip_setup_no_connection">CANNOT CONNECT</string>
+    <string name="voip_setup_no_connection_more">Check connection</string>
+    <string name="voip_setup_enhanced_calling">OPTIMIZED CALLING</string>
+    <string name="voip_setup_instruction_after">UNPAIR AND RE-PAIR WATCH</string>
+    <string name="voip_setup_instructions_start">Because your watch has a new number, you will need to remove the watch from the Mission Control parent app.</string>
+    <string name="voip_setup_not_performed">Not performed</string>
+    <string name="voip_setup_detected">Detected</string>
+    <string name="voip_setup_attempt">Attempt %d...</string>
+    <string name="voip_setup_finish_setup_header">FINISH SETUP</string>
+    <string name="voip_setup_finish_setup_description">To make a call, setup optimized calling or switch to standard calling.</string>
+    <string name="voip_setup_finish_setup_description_optimize">To make a call, setup optimized calling.</string>
+    <string name="voip_setup_finish_setup_label">Set calling network</string>
+    <string name="voip_setup_completed">Completed</string>
+    <string name="voip_setup_json_error">JSON error: Failed reading successful response. Please contact support and let us know about the issue</string>
+    <string name="voip_setup_error">Error %d</string>
+    <string name="voip_setup_error2">Error %d-%d</string>
+    <string name="voip_setup_error3">Error %d-%d-%d</string>
+    <string name="voip_setup_complete_header">COMPLETE SETUP</string>
+    <string name="voip_setup_complete_decription">To complete the setup for enhanced calling, use the parent app to pair this watch.</string>
+    <string name="voip_setup_complete_button">Show pairing QR code</string>
+    <string name="voip_setup_finish_setup">Finish setup</string>
+    <string name="voip_setup_finish_label">Finish</string>
+    <string name="voip_setup_finish_label2">Continue</string>
+    <string name="voip_setup_failed_retry">Retry</string>
+    <string name="voip_setup_failed_try_again">Try again</string>
+    <string name="voip_setup_standard_title">STANDARD CALLING</string>
+    <string name="voip_setup_standard_description">Switching to standard calling will delete your current phone number. Do you want to proceed?</string>
+
+    <string name="voip_call_error_header">Call error</string>
+    <string name="voip_call_error_title">CALL ERROR</string>
+    <string name="voip_call_error_desc">Unable to make the call.</string>
+    <string name="voip_call_error_option">Try again</string>
+    <string name="voip_call_error_option2">Restart watch</string>
+
+    <string-array name="services">
+        <item>Native</item>
+        <item>VoIP</item>
+    </string-array>
+
+    <string-array name="speaker">
+        <item>No</item>
+        <item>Yes</item>
+    </string-array>
+
+    <string-array name="audiomode">
+        <item>Invalid</item>
+        <item>Concurrent</item>
+        <item>Normal</item>
+        <item>Ringtone</item>
+        <item>In call</item>
+        <item>In communications</item>
+        <item>In call Screenings</item>
+        <item>Call redirect</item>
+    </string-array>
+
+    <string-array name="channel_type">
+        <item>Voice call</item>
+        <item>System</item>
+        <item>Ring</item>
+        <item>Music</item>
+        <item>Alarm</item>
+        <item>Notification</item>
+        <item>Bluetooth Sco</item>
+        <item>System enforced</item>
+        <item>DTMF</item>
+        <item>TTS</item>
+        <item>Accessibility</item>
+    </string-array>
+
+    <string-array name="denoise">
+        <item>Disabled</item>
+        <item>For recording only</item>
+        <item>Both for playback and recording</item>
+        <item>Auto guess</item>
+    </string-array>
+
+    <string-array name="aec">
+        <item>no</item>
+        <item>yes</item>
+    </string-array>
+
+    <string-array name="agc">
+        <item>Disabled</item>
+        <item>For recording only</item>
+        <item>Both for playback and recording</item>
+        <item>Guess</item>
+    </string-array>
+
+    <string-array name="silencesupress">
+        <item>auto</item>
+        <item>no (disabled)</item>
+        <item>yes</item>
+    </string-array>
+
+    <!--________DON'T TRANSLATE________-->
+    <string-array name="aectype">
+        <item>auto</item>
+        <item>none</item>
+        <item>software</item>
+        <item>hardware</item>
+        <item>fast</item>
+        <item>volume</item>
+        <item>hardware,fast,volume</item>
+        <item>software,hardware,fast,volume</item>
+    </string-array>
+    <!--________________________________-->
+
+    <string-array name="priority">
+        <item>don\'t use</item>
+        <item>low</item>
+        <item>medium</item>
+        <item>high</item>
+    </string-array>
+
+
+    <string name="prefs_auto_select">Auto-select</string>
+    <string name="prefs_select_timezone">Select time zone</string>
+    <string name="prefs_clock12">12 hour AM/PM</string>
+    <string name="prefs_clock24">24 hour</string>
+    <string name="prefs_show">Show</string>
+    <string name="prefs_show_emergency">emergency calling will be available from the call app</string>
+    <string name="prefs_hide">Hide</string>
+    <string name="prefs_hide_emergency">emergency calling will be hidden from the call app</string>
+    <string name="prefs_optimized">Optimized</string>
+
+    <string name="alert_no_contacts_title">No contacts</string>
+    <string name="alert_no_contacts">NO CONTACTS</string>
+    <string name="alert_no_contacts_text">If your watch is paired, restart now. Otherwise, pair it.</string>
+    <string name="alert_no_contacts_pair">Pair watch</string>
+    <string name="device_settings">Device settings</string>
+
+    <string name="very_loud">Very loud</string>
+    <string name="loud">Loud</string>
+    <string name="quiet">Quiet</string>
+    <string name="mute">Mute</string>
+
+    <string name="phone_status_calling">Dialing</string>
+    <string name="phone_status_ringing">Ringing</string>
+    <string name="phone_status_in_call">In call</string>
+    <string name="phone_status_empty"></string>
+    <string name="no_media">TAKE A PICTURE!</string>
+    <string name="no_media_label">All your photos and</string>
+    <string name="no_media_label2">videos will be saved here.</string>
+    <string name="no_media_cam">TAKE A PICTURE!</string>
+    <string name="no_media_cam_label">All your photos will</string>
+    <string name="no_media_cam_label2">be saved here.</string>
+    <string name="no_media_vid">TAKE A VIDEO!</string>
+    <string name="no_media_vid_label">All your videos will</string>
+    <string name="no_media_vid_label2">be saved here.</string>
+
+    <string name="voip_setup_call">Call %s</string>
+
+    <string name="device_muted">Device is muted</string>
+
+    <string name="powerOff">Power off</string>
+    <string name="restart">Restart</string>
+    <string name="chimes">Chimes</string>
+    <string name="explore">Explore</string>
+    <string name="funky">Funky</string>
+    <string name="kiwi">Kiwi</string>
+    <string name="lollipop">Lollipop</string>
+    <string name="birdie">Birdie</string>
+    <string name="cherish">Cherish</string>
+    <string name="jelly">Jelly</string>
+    <string name="call_history">Call history</string>
+
+
+    <string name="qr_pair_text_0">In the COSMO: Mission Control app, <annotation style='color:#ffffffff'>add device</annotation> and scan the code below</string>
+    <string name="qr_pair_text_1">In the uKid2 app, <annotation style='color:#ffffffff'>add device</annotation> and scan the code below</string>
+    <string name="qr_pair_text2">Enter the code below to complete pairing.</string>
+    <string name="qr_pair_text3">Device paired successfully!</string>
+    <string name="qr_pair_text_call">Now let\'s try calling %s.</string>
+    <string name="qr_pair_text_call2">Let\'s try calling %s again.</string>
+    <string name="qr_pair_text_question">How was the call?</string>
+    <string name="qr_pair_text_question2">How was the call this time?</string>
+    <string name="qr_connection">Checking connection</string>
+    <string name="qr_cred">Setting up VOIP</string>
+    <string name="qr_cred2">Setting up VOIP</string>
+    <string name="qr_optimizing">No problem. We\'ll try something else.</string>
+    <string name="qr_title1">Connection</string>
+    <string name="qr_title2">Optimizing</string>
+    <string name="qr_try_again">Try again</string>
+    <string name="qr_optimizing_error">Oh no! Let\'s try to get some extra help.</string>
+    <string name="qr_success_standard">Great, your watch is ready to make calls!</string>
+    <string name="qr_success_optimized">Amazing! You now have a new phone number.</string>
+    <string name="qr_success_standard_more">Your number again is</string>
+    <string name="qr_success_optimized_more">We updated a few settings to optimize your calling experience. Make sure to update your phone contacts.</string>
+    <string name="qr_make_call">Let\'s make your first call together to make sure everything is working.</string>
+    <string name="time_is_up">Time\'s up!</string>
+    <string name="infinity">Infinity</string>
+    <string name="error">Error</string>
+    <string name="emoji_text">Emoji text</string>
+    <string name="message_uploading">Please wait. Your message is still being sent. If you exit now, it may be lost.</string>
+    <string name="wait">Wait</string>
+
+    <string name="sip_version">SIP version</string>
+    <string name="welcome_to">Welcome to</string>
+    <string name="start_setup">Start setup</string>
+    <string name="no_sim_detail">Insert SIM card or check if it is inserted correctly and restart.</string>
+    <string name="sim_check">To use your new watch, you will need an active SIM card.</string>
+    <string name="sim_check2">On your phone or desktop browser, visit http://<annotation style='color:#ffffffff'>ct.watch</annotation> to activate your SIM.</string>
+    <string name="sim_check3">Please allow up to 30 mins to process, and then try again by restarting.</string>
+    <string name="sim_check4">Already have a plan?</string>
+    <string name="sim_check5">Welcome to COSMO!</string>
+    <string name="sim_check6">Already have a plan?</string>
+    <string name="startup_data_check">Checking data</string>
+    <string name="startup_update_check">Checking for updates</string>
+    <string name="startup_updating">Updating</string>
+    <string name="startup_configuring">Configuring network</string>
+    <string name="startup_download_app">On your phone, download and open:</string>
+    <string name="startup_download_app3">Can\'t find the app? Visit http://<annotation style='color:#ffffffff'>ct.watch/app</annotation> to download directly.</string>
+    <string name="startup_download_app2">COSMO: Mission Control</string>
+    <string name="startup_title1">Activate</string>
+    <string name="startup_title2">Download app</string>
+    <string name="qr_desc">In the COSMO: Mission Control app, <annotation style='color:#ffffffff'>add device</annotation> and scan the code below</string>
+    <string name="startup_to_pair">Continue to pair</string>
+    <string name="wifi_setup">Setup Wi-Fi</string>
+    <string name="setup_later">Setup later</string>
+    <string name="digit_code">Once scanned, you\'ll see an 8-character code to complete pairing. Restart if code does not appear.</string>
+    <string name="wifi_setup_text">Let\'s setup your Wi-Fi.</string>
+    <string name="number_assigned">Amazing! The number assigned to this watch is</string>
+    <string name="wifi_setup_text2">Select network</string>
+    <string name="customize_wallpaper">Now let\'s customize your watch!</string>
+    <string name="select_wallpaper">Select wallpaper</string>
+    <string name="skip">Skip</string>
+    <string name="preferences">Preferences</string>
+    <string name="to_use_your_watch">To use your watch, you will need a COSMO Membership service plan.</string>
+    <string name="qr_pair_adjusting">We\'re adjusting some settings.</string>
+    <string name="skip_tour">Skip tour</string>
+    <string name="watch_ready">Let\'s learn more about your watch!</string>
+    <string name="are_you_sure_tittle">Are you sure?</string>
+    <string name="are_you_sure_desc">Your watch does not currently show an active service connection. In order to use your watch, you will need to activate your SIM with a COSMO Membership plan.</string>
+    <string name="are_you_sure_button">Skip setup</string>
+    <string name="skip_activation">Skip activation</string>
+    <string name="taking_to_long">It\'s taking longer than normal to connect. Would you like to keep trying?</string>
+    <string name="connecting___">Connecting...</string>
+    <string name="skip_pairing">Skip pairing</string>
+    <string name="tall_done">You\'re all done.\nTime to use your watch!</string>
+    <string name="this_may_take">This may take a minute</string>
+
+    <string name="gallery_folder_all_media">All media</string>
+    <string name="gallery_folder_all">All</string>
+    <string name="gallery_folder_image">Photos</string>
+    <string name="gallery_folder_video">Videos</string>
+    <string name="gallery_folder_audio">Sounds</string>
+
+    <string name="downloading">Downloading</string>
+    <string name="verifying_package">Verifying package</string>
+    <string name="installing">Installing</string>
+    <string name="installing_warning">Do not restart or\nturn off your watch.</string>
+    <string name="media_missing">[Media deleted]</string>
+    <string name="start_texting">Start texting</string>
+    <string name="msg_type_image">Photo</string>
+    <string name="msg_type_video">Video</string>
+    <string name="calling_you">Calling you</string>
+    <string name="calling_volume">Calling volume</string>
+
+    <string name="powering_off">Powering off...</string>
+    <string name="restarting">Restarting...</string>
+    <string name="unpairing">Unpairing...</string>
+
+    <string name="unsupported_format">Unsupported format</string>
+    <string name="cannot_open_title">CANNOT OPEN FILE</string>
+    <string name="cannot_open">Your watch cannot open this file.</string>
+    <string name="file_size">File size</string>
+    <string name="file_too_big_title">IT\'S TOO BIG!</string>
+    <string name="file_too_big">This file is too big to send.</string>
+
+    <string name="unsupported_filetype">[Unsupported file type]</string>
+    <string name="rejected_message">[*] From COSMO: This group chat is hidden from %s because not all contacts have been approved. Use the parent app to add approved contacts. [*]</string>
+    <string name="you">You</string>
+    <string name="activating_sos">Activating SOS</string>
+    <string name="enabled">Enabled</string>
+    <string name="disabled">Disabled</string>
+
+    <string name="downloading_contacts">Downloading contacts</string>
+    <string name="syncing">Syncing</string>
+
+    <string name="emergency_enable">Trying to enable emergency calling...</string>
+    <string name="emergency_disable">Trying to disable emergency calling...</string>
+    <string name="emergency_error">ERROR! Could not change the setting right now.</string>
+    <string name="app_icon">App Icon</string>
+    <string name="app_status_icon">App Status Icon</string>
+
+
+    <string name="time_to_focus">TIME TO FOCUS</string>
+    <string name="connect_to_wifi">CONNECT TO WIFI</string>
+    <string name="no_more_time">NO MORE TIME</string>
+
+    <string name="this_app_cannot_be_used_during_school_time">This app cannot be used\nduring school time.</string>
+    <string name="this_app_only_works_on_wifi">This app only\nworks on WiFi.</string>
+    <string name="you_have_used_all_of_your_daily_time_for_this_app">You have used all of your\ndaily time for this app.</string>
+
+    <string name="focus_time">Focus time</string>
+    <string name="connect_to_wifi_2">Connect to WiFi</string>
+    <string name="screen_time_limit">Screen time limit</string>
 </resources>
+
