@@ -42,7 +42,17 @@ class CosmoStatusbar(context: Context, attrs: AttributeSet?) : LinearLayoutCompa
         binding.topBarPageApps.setBackgroundColor(Color.TRANSPARENT)
         typedArray.recycle()
     }
+    fun setStatusbarForSchoolMode(){
+        binding.topBarPageRoot.visibility = View.GONE
+        binding.topBarPageApps.visibility = View.VISIBLE
+        binding.topBarPageApps.setBackgroundColor(context.getColor(R.color.colorBlack))
+    }
 
+    fun setStatusbarForRegularMode(){
+        binding.topBarPageRoot.visibility = View.GONE
+        binding.topBarPageApps.visibility = View.VISIBLE
+        binding.title.setText(R.string.title_app_launcher)
+    }
     fun refreshData() {
         binding.title.text = "School Mode"
         binding.topBarPageApps.setBackgroundColor(context.getColor(R.color.colorBlack))
