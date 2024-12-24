@@ -20,19 +20,21 @@ class CosmoRadioButton @JvmOverloads constructor(
     defStyleAttr: Int = 0
 ) : AppCompatRadioButton(context, attrs, defStyleAttr) {
 
+    // Boolean and basic properties
     private var isChecked: Boolean = false
     private var title: String = ""
     private var subtitle: String = ""
 
+    // Text-related properties
     private var titleTextSize = 0f
     private var subtitleTextSize = 0f
-
-    // Background-related properties
-
-    private var backgroundHeight = 0
-    private var customBackgroundRadius: Float = 20f
     private var titleTextColor: Int = Color.BLACK
     private var subtitleTextColor: Int = Color.BLACK
+    private var fontFamily: Typeface? = null
+
+    // Background-related properties
+    private var backgroundHeight = 0
+    private var customBackgroundRadius: Float = 20f
     private var customBackgroundColor: Int = Color.BLACK
 
     // Padding-related properties
@@ -50,9 +52,6 @@ class CosmoRadioButton @JvmOverloads constructor(
     private val shapeDrawable = android.graphics.drawable.ShapeDrawable()
     private var backgroundDrawable: Drawable? = null
 
-    // Font related properties
-    private var fontFamily: Typeface? = null
-
     // Paint object to handle drawing
     private val paint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
         style = Paint.Style.FILL
@@ -67,36 +66,29 @@ class CosmoRadioButton @JvmOverloads constructor(
         ).apply {
             try {
 
-                title = getString(R.styleable.CosmoRadioButton_title).toString()
-                getString(R.styleable.CosmoRadioButton_subTitle)?.let {
+                title = getString(R.styleable.CosmoRadioButton_cosmoRadioButtonTitle).toString()
+                getString(R.styleable.CosmoRadioButton_cosmoRadioButtonSubTitle)?.let {
                     subtitle = it
                 } ?: run {
                     subtitle = ""
                 }
 
-                titleTextSize = getDimension(R.styleable.CosmoRadioButton_titleTextSize, 0f)
-                subtitleTextSize = getDimension(R.styleable.CosmoRadioButton_subtitleTextSize, 0f)
+                titleTextSize = getDimension(R.styleable.CosmoRadioButton_cosmoRadioButtonTitleTextSize, 0f)
+                subtitleTextSize = getDimension(R.styleable.CosmoRadioButton_cosmoRadioButtonSubtitleTextSize, 0f)
 
-                titleTextColor = getColor(R.styleable.CosmoRadioButton_titleTextColor, Color.BLACK)
-                subtitleTextColor =
-                    getColor(R.styleable.CosmoRadioButton_subtitleTextColor, Color.BLACK)
+                titleTextColor = getColor(R.styleable.CosmoRadioButton_cosmoRadioButtonTitleTextColor, Color.BLACK)
+                subtitleTextColor = getColor(R.styleable.CosmoRadioButton_cosmoRadioButtonSubtitleTextColor, Color.BLACK)
 
-                customBackgroundRadius =
-                    getDimension(R.styleable.CosmoRadioButton_backgroundRadius, 20f)
-                customBackgroundColor =
-                    getColor(R.styleable.CosmoRadioButton_backgroundColorCode, Color.BLACK)
-                backgroundHeight =
-                    getDimensionPixelSize(R.styleable.CosmoRadioButton_backgroundHeight, 0)
-                radioButtonColor =
-                    getColor(R.styleable.CosmoRadioButton_radioButtonColor, Color.BLUE)
-                isChecked = getBoolean(R.styleable.CosmoRadioButton_checked, false)
-                paddingStart = getDimension(R.styleable.CosmoRadioButton_paddingStart, 15f)
-                paddingEnd = getDimension(R.styleable.CosmoRadioButton_paddingEnd, 15f)
+                customBackgroundRadius = getDimension(R.styleable.CosmoRadioButton_cosmoRadioButtonBackgroundRadius, 20f)
+                customBackgroundColor = getColor(R.styleable.CosmoRadioButton_cosmoRadioButtonBackgroundColor, Color.BLACK)
+                backgroundHeight = getDimensionPixelSize(R.styleable.CosmoRadioButton_cosmoRadioButtonBackgroundHeight, 0)
+                radioButtonColor = getColor(R.styleable.CosmoRadioButton_cosmoRadioButtonRadioButtonColor, Color.BLUE)
+                isChecked = getBoolean(R.styleable.CosmoRadioButton_cosmoRadioButtonChecked, false)
+                paddingStart = getDimension(R.styleable.CosmoRadioButton_cosmoRadioButtonPaddingStart, 15f)
+                paddingEnd = getDimension(R.styleable.CosmoRadioButton_cosmoRadioButtonPaddingEnd, 15f)
 
-                val selectedDrawableId =
-                    getResourceId(R.styleable.CosmoRadioButton_selectedDrawable, -1)
-                val unselectedDrawableId =
-                    getResourceId(R.styleable.CosmoRadioButton_unselectedDrawable, -1)
+                val selectedDrawableId = getResourceId(R.styleable.CosmoRadioButton_cosmoRadioButtonSelectedDrawable, -1)
+                val unselectedDrawableId = getResourceId(R.styleable.CosmoRadioButton_cosmoRadioButtonUnselectedDrawable, -1)
                 if (selectedDrawableId != -1) {
                     selectedDrawable = ContextCompat.getDrawable(context, selectedDrawableId)
                 }
@@ -105,7 +97,7 @@ class CosmoRadioButton @JvmOverloads constructor(
                 }
 
                 // Initialize the font family
-                val fontFamilyId = getResourceId(R.styleable.CosmoRadioButton_font, -1)
+                val fontFamilyId = getResourceId(R.styleable.CosmoRadioButton_cosmoRadioButtonFont, -1)
                 if (fontFamilyId != -1) {
                     fontFamily = ResourcesCompat.getFont(context, fontFamilyId)
                 }
@@ -143,7 +135,6 @@ class CosmoRadioButton @JvmOverloads constructor(
 
 
     override fun onDraw(canvas: Canvas) {
-        // Draw the background circle with radius
 
         background = backgroundDrawable
 

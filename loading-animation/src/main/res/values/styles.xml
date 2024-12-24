@@ -25,18 +25,18 @@
     </style>
 
     <style name="CosmoRadioButtonStyle">
-        <item name="titleTextSize">@dimen/setting_tile_text_size</item>
-        <item name="subtitleTextSize">@dimen/setting_tile_text_size</item>
-        <item name="backgroundHeight">@dimen/setting_tile_height</item>
-        <item name="backgroundRadius">10dp</item>
-        <item name="titleTextColor">@color/medium_gray</item>
-        <item name="subtitleTextColor">@android:color/white</item>
-        <item name="backgroundColorCode">@color/setting_tile_color</item>
-        <item name="paddingStart">15dp</item>
-        <item name="paddingEnd">15dp</item>
-        <item name="selectedDrawable">@drawable/ic_radio_selected</item>
-        <item name="unselectedDrawable">@drawable/ic_radio_unselected</item>
-        <item name="font">@font/neuzeit_bold</item>
+        <item name="cosmoRadioButtonTitleTextSize">@dimen/setting_tile_text_size</item>
+        <item name="cosmoRadioButtonSubtitleTextSize">@dimen/setting_tile_text_size</item>
+        <item name="cosmoRadioButtonBackgroundHeight">@dimen/setting_tile_height</item>
+        <item name="cosmoRadioButtonBackgroundRadius">10dp</item>
+        <item name="cosmoRadioButtonTitleTextColor">@color/medium_gray</item>
+        <item name="cosmoRadioButtonSubtitleTextColor">@android:color/white</item>
+        <item name="cosmoRadioButtonBackgroundColor">@color/setting_tile_color</item>
+        <item name="cosmoRadioButtonPaddingStart">15dp</item>
+        <item name="cosmoRadioButtonPaddingEnd">15dp</item>
+        <item name="cosmoRadioButtonSelectedDrawable">@drawable/ic_radio_selected</item>
+        <item name="cosmoRadioButtonUnselectedDrawable">@drawable/ic_radio_unselected</item>
+        <item name="cosmoRadioButtonFont">@font/neuzeit_bold</item>
     </style>
 
 

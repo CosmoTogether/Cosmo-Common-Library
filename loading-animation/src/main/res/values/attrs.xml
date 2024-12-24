@@ -19,22 +19,23 @@
 
 
     <declare-styleable name="CosmoRadioButton">
-        <attr name="title" format="string" />
-        <attr name="subTitle" format="string" />
-        <attr name="titleTextSize" format="dimension" />
-        <attr name="subtitleTextSize" format="dimension" />
-        <attr name="backgroundHeight" format="dimension" />
-        <attr name="backgroundRadius" format="dimension" />
-        <attr name="titleTextColor" format="color" />
-        <attr name="subtitleTextColor" format="color" />
-        <attr name="backgroundColorCode" format="reference" />
-        <attr name="radioButtonColor" format="color" />
-        <attr name="checked" format="boolean" />
-        <attr name="paddingStart" format="dimension" />
-        <attr name="paddingEnd" format="dimension" />
-        <attr name="selectedDrawable" format="reference" />
-        <attr name="unselectedDrawable" format="reference" />
-        <attr name="font" format="reference"/>
+        <attr name="cosmoRadioButtonTitle" format="string" />
+        <attr name="cosmoRadioButtonSubTitle" format="string" />
+        <attr name="cosmoRadioButtonTitleTextSize" format="dimension" />
+        <attr name="cosmoRadioButtonSubtitleTextSize" format="dimension" />
+        <attr name="cosmoRadioButtonBackgroundHeight" format="dimension" />
+        <attr name="cosmoRadioButtonBackgroundRadius" format="dimension" />
+        <attr name="cosmoRadioButtonTitleTextColor" format="color" />
+        <attr name="cosmoRadioButtonSubtitleTextColor" format="color" />
+        <attr name="cosmoRadioButtonBackgroundColor" format="reference" />
+        <attr name="cosmoRadioButtonRadioButtonColor" format="color" />
+        <attr name="cosmoRadioButtonChecked" format="boolean" />
+        <attr name="cosmoRadioButtonPaddingStart" format="dimension" />
+        <attr name="cosmoRadioButtonPaddingEnd" format="dimension" />
+        <attr name="cosmoRadioButtonSelectedDrawable" format="reference" />
+        <attr name="cosmoRadioButtonUnselectedDrawable" format="reference" />
+        <attr name="cosmoRadioButtonFont" format="reference"/>
     </declare-styleable>
+
 
 </resources>
