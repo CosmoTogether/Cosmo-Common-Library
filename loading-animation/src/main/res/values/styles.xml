@@ -17,8 +17,6 @@
         <item name="cosmoTextLarge">@style/cosmo_text_large_smaller</item>
     </style>
 
-
-
     <style name="cosmo_text_large_smaller">
         <item name="android:textSize">30sp</item>
     </style>
@@ -26,6 +24,20 @@
         <item name="android:textSize">22sp</item>
     </style>
 
+    <style name="CosmoRadioButtonStyle">
+        <item name="titleTextSize">@dimen/setting_tile_text_size</item>
+        <item name="subtitleTextSize">@dimen/setting_tile_text_size</item>
+        <item name="backgroundHeight">@dimen/setting_tile_height</item>
+        <item name="backgroundRadius">10dp</item>
+        <item name="titleTextColor">@color/medium_gray</item>
+        <item name="subtitleTextColor">@android:color/white</item>
+        <item name="backgroundColorCode">@color/setting_tile_color</item>
+        <item name="paddingStart">15dp</item>
+        <item name="paddingEnd">15dp</item>
+        <item name="selectedDrawable">@drawable/ic_radio_selected</item>
+        <item name="unselectedDrawable">@drawable/ic_radio_unselected</item>
+        <item name="font">@font/neuzeit_bold</item>
+    </style>
 
 
 

@@ -17,4 +17,24 @@
         <attr name="maxOffset" format="float" />
     </declare-styleable>
 
+
+    <declare-styleable name="CosmoRadioButton">
+        <attr name="title" format="string" />
+        <attr name="subTitle" format="string" />
+        <attr name="titleTextSize" format="dimension" />
+        <attr name="subtitleTextSize" format="dimension" />
+        <attr name="backgroundHeight" format="dimension" />
+        <attr name="backgroundRadius" format="dimension" />
+        <attr name="titleTextColor" format="color" />
+        <attr name="subtitleTextColor" format="color" />
+        <attr name="backgroundColorCode" format="reference" />
+        <attr name="radioButtonColor" format="color" />
+        <attr name="checked" format="boolean" />
+        <attr name="paddingStart" format="dimension" />
+        <attr name="paddingEnd" format="dimension" />
+        <attr name="selectedDrawable" format="reference" />
+        <attr name="unselectedDrawable" format="reference" />
+        <attr name="font" format="reference"/>
+    </declare-styleable>
+
 </resources>
