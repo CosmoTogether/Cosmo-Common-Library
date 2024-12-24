@@ -17,24 +17,26 @@
         <attr name="maxOffset" format="float" />
     </declare-styleable>
 
-
     <declare-styleable name="CosmoRadioButton">
-        <attr name="cosmoRadioButtonTitle" format="string" />
-        <attr name="cosmoRadioButtonSubTitle" format="string" />
-        <attr name="cosmoRadioButtonTitleTextSize" format="dimension" />
-        <attr name="cosmoRadioButtonSubtitleTextSize" format="dimension" />
-        <attr name="cosmoRadioButtonBackgroundHeight" format="dimension" />
-        <attr name="cosmoRadioButtonBackgroundRadius" format="dimension" />
-        <attr name="cosmoRadioButtonTitleTextColor" format="color" />
-        <attr name="cosmoRadioButtonSubtitleTextColor" format="color" />
-        <attr name="cosmoRadioButtonBackgroundColor" format="reference" />
-        <attr name="cosmoRadioButtonRadioButtonColor" format="color" />
-        <attr name="cosmoRadioButtonChecked" format="boolean" />
-        <attr name="cosmoRadioButtonPaddingStart" format="dimension" />
-        <attr name="cosmoRadioButtonPaddingEnd" format="dimension" />
-        <attr name="cosmoRadioButtonSelectedDrawable" format="reference" />
-        <attr name="cosmoRadioButtonUnselectedDrawable" format="reference" />
-        <attr name="cosmoRadioButtonFont" format="reference"/>
+        <attr name="crbTitle" format="string" />
+        <attr name="crbSubTitle" format="string" />
+        <attr name="crbTitleTextSize" format="dimension" />
+        <attr name="crbSubtitleTextSize" format="dimension" />
+        <attr name="crbBackgroundHeight" format="dimension" />
+        <attr name="crbBackgroundRadius" format="dimension" />
+        <attr name="crbTitleTextColor" format="color" />
+        <attr name="crbSubtitleTextColor" format="color" />
+        <attr name="crbBackgroundColor" format="reference" />
+        <attr name="crbRadioButtonColor" format="color" />
+        <attr name="crbChecked" format="boolean" />
+        <attr name="crbPaddingStart" format="dimension" />
+        <attr name="crbPaddingEnd" format="dimension" />
+        <attr name="crbSelectedDrawable" format="reference" />
+        <attr name="crbUnselectedDrawable" format="reference" />
+        <attr name="crbTitleFont" format="reference"/>
+        <attr name="crbSubTitleFont" format="reference"/>
+        <attr name="crbTitleStyle" format="reference"/>
+        <attr name="crbSubTitleStyle" format="reference"/>
     </declare-styleable>
 
 

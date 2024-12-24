@@ -24,19 +24,62 @@
         <item name="android:textSize">22sp</item>
     </style>
 
-    <style name="CosmoRadioButtonStyle">
-        <item name="cosmoRadioButtonTitleTextSize">@dimen/setting_tile_text_size</item>
-        <item name="cosmoRadioButtonSubtitleTextSize">@dimen/setting_tile_text_size</item>
-        <item name="cosmoRadioButtonBackgroundHeight">@dimen/setting_tile_height</item>
-        <item name="cosmoRadioButtonBackgroundRadius">10dp</item>
-        <item name="cosmoRadioButtonTitleTextColor">@color/medium_gray</item>
-        <item name="cosmoRadioButtonSubtitleTextColor">@android:color/white</item>
-        <item name="cosmoRadioButtonBackgroundColor">@color/setting_tile_color</item>
-        <item name="cosmoRadioButtonPaddingStart">15dp</item>
-        <item name="cosmoRadioButtonPaddingEnd">15dp</item>
-        <item name="cosmoRadioButtonSelectedDrawable">@drawable/ic_radio_selected</item>
-        <item name="cosmoRadioButtonUnselectedDrawable">@drawable/ic_radio_unselected</item>
-        <item name="cosmoRadioButtonFont">@font/neuzeit_bold</item>
+    <style name="CosmoRadioButtonBaseStyle">
+        <item name="crbBackgroundHeight">@dimen/setting_tile_height</item>
+        <item name="crbBackgroundRadius">10dp</item>
+        <item name="crbBackgroundColor">@color/setting_tile_color</item>
+        <item name="crbPaddingStart">15dp</item>
+        <item name="crbPaddingEnd">15dp</item>
+        <item name="crbSelectedDrawable">@drawable/ic_radio_selected</item>
+        <item name="crbUnselectedDrawable">@drawable/ic_radio_unselected</item>
+    </style>
+
+    <style name="CosmoRadioButtonSmallTitleStyle" parent="CosmoRadioButtonBaseStyle">
+        <item name="crbTitleTextSize">@dimen/text_size_small</item>
+        <item name="crbTitleTextColor">@color/medium_gray</item>
+        <item name="crbTitleFont">@font/neuzeit_bold</item>
+    </style>
+
+    <style name="CosmoRadioButtonMediumTitleStyle" parent="CosmoRadioButtonBaseStyle">
+        <item name="crbTitleTextSize">@dimen/text_size_medium</item>
+        <item name="crbTitleTextColor">@color/medium_gray</item>
+        <item name="crbTitleFont">@font/neuzeit_bold</item>
+    </style>
+
+    <style name="CosmoRadioButtonLargeTitleStyle" parent="CosmoRadioButtonBaseStyle">
+        <item name="crbTitleTextSize">@dimen/text_size_large</item>
+        <item name="crbTitleTextColor">@color/medium_gray</item>
+        <item name="crbTitleFont">@font/neuzeit_bold</item>
+    </style>
+
+    <style name="CosmoRadioButtonExtraLargeTitleStyle" parent="CosmoRadioButtonBaseStyle">
+        <item name="crbTitleTextSize">@dimen/text_size_extra_large</item>
+        <item name="crbTitleTextColor">@color/medium_gray</item>
+        <item name="crbTitleFont">@font/neuzeit_bold</item>
+    </style>
+
+    <style name="CosmoRadioButtonSmallSubtitleStyle" parent="CosmoRadioButtonBaseStyle">
+        <item name="crbSubtitleTextSize">@dimen/text_size_small</item>
+        <item name="crbSubtitleTextColor">@color/medium_gray</item>
+        <item name="crbSubTitleFont">@font/neuzeit_bold</item>
+    </style>
+
+    <style name="CosmoRadioButtonMediumSubtitleStyle" parent="CosmoRadioButtonBaseStyle">
+        <item name="crbSubtitleTextSize">@dimen/text_size_medium</item>
+        <item name="crbSubtitleTextColor">@color/medium_gray</item>
+        <item name="crbSubTitleFont">@font/neuzeit_bold</item>
+    </style>
+
+    <style name="CosmoRadioButtonLargeSubtitleStyle" parent="CosmoRadioButtonBaseStyle">
+        <item name="crbSubtitleTextSize">@dimen/text_size_large</item>
+        <item name="crbSubtitleTextColor">@color/medium_gray</item>
+        <item name="crbSubTitleFont">@font/neuzeit_bold</item>
+    </style>
+
+    <style name="CosmoRadioButtonExtraLargeSubtitleStyle" parent="CosmoRadioButtonBaseStyle">
+        <item name="crbSubtitleTextSize">@dimen/text_size_extra_large</item>
+        <item name="crbSubtitleTextColor">@color/medium_gray</item>
+        <item name="crbSubTitleFont">@font/neuzeit_bold</item>
     </style>
 
 

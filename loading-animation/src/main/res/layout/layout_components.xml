@@ -6,15 +6,18 @@
     android:padding="20dp">
 
     <com.cosmotogether.loading.CosmoRadioButton
-        style="@style/CosmoRadioButtonStyle"
+        style="@style/CosmoRadioButtonBaseStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:cosmoRadioButtonChecked="false"
-        app:cosmoRadioButtonTitle="Select location"
-        app:cosmoRadioButtonSubTitle="Chicago International hospital, United States"
+        app:crbChecked="false"
+        app:crbTitle="Select location"
+        app:crbSubTitle="Chicago International hospital, United States"
+        app:crbTitleStyle="@style/CosmoRadioButtonSmallTitleStyle"
+        app:crbSubTitleStyle="@style/CosmoRadioButtonMediumSubtitleStyle"
+
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

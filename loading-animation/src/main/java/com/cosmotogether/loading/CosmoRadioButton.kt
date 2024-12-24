@@ -1,6 +1,7 @@
 package com.cosmotogether.loading
 
 import android.content.Context
+import android.content.res.TypedArray
 import android.graphics.Canvas
 import android.graphics.Color
 import android.graphics.Paint
@@ -30,7 +31,8 @@ class CosmoRadioButton @JvmOverloads constructor(
     private var subtitleTextSize = 0f
     private var titleTextColor: Int = Color.BLACK
     private var subtitleTextColor: Int = Color.BLACK
-    private var fontFamily: Typeface? = null
+    private var titleFontFamily: Typeface? = null
+    private var subTitleFontFamily: Typeface? = null
 
     // Background-related properties
     private var backgroundHeight = 0
@@ -66,41 +68,56 @@ class CosmoRadioButton @JvmOverloads constructor(
         ).apply {
             try {
 
-                title = getString(R.styleable.CosmoRadioButton_cosmoRadioButtonTitle).toString()
-                getString(R.styleable.CosmoRadioButton_cosmoRadioButtonSubTitle)?.let {
+                title = getString(R.styleable.CosmoRadioButton_crbTitle).toString()
+                getString(R.styleable.CosmoRadioButton_crbSubTitle)?.let {
                     subtitle = it
                 } ?: run {
                     subtitle = ""
                 }
 
-                titleTextSize = getDimension(R.styleable.CosmoRadioButton_cosmoRadioButtonTitleTextSize, 0f)
-                subtitleTextSize = getDimension(R.styleable.CosmoRadioButton_cosmoRadioButtonSubtitleTextSize, 0f)
+                val titleStyleResId = getResourceId(R.styleable.CosmoRadioButton_crbTitleStyle, 0)
+                if (titleStyleResId != 0) {
+                    val styledAttrs = context.obtainStyledAttributes(titleStyleResId, R.styleable.CosmoRadioButton)
+                    titleTextSize = styledAttrs.getDimension(R.styleable.CosmoRadioButton_crbTitleTextSize, titleTextSize)
+                    titleTextColor = styledAttrs.getColor(R.styleable.CosmoRadioButton_crbTitleTextColor, titleTextColor)
 
-                titleTextColor = getColor(R.styleable.CosmoRadioButton_cosmoRadioButtonTitleTextColor, Color.BLACK)
-                subtitleTextColor = getColor(R.styleable.CosmoRadioButton_cosmoRadioButtonSubtitleTextColor, Color.BLACK)
+                    val fontFamilyId = styledAttrs.getResourceId(R.styleable.CosmoRadioButton_crbTitleFont, -1)
+                    if (fontFamilyId != -1) {
+                        titleFontFamily = ResourcesCompat.getFont(context, fontFamilyId)
+                    }
+                    styledAttrs.recycle()
+                }
 
-                customBackgroundRadius = getDimension(R.styleable.CosmoRadioButton_cosmoRadioButtonBackgroundRadius, 20f)
-                customBackgroundColor = getColor(R.styleable.CosmoRadioButton_cosmoRadioButtonBackgroundColor, Color.BLACK)
-                backgroundHeight = getDimensionPixelSize(R.styleable.CosmoRadioButton_cosmoRadioButtonBackgroundHeight, 0)
-                radioButtonColor = getColor(R.styleable.CosmoRadioButton_cosmoRadioButtonRadioButtonColor, Color.BLUE)
-                isChecked = getBoolean(R.styleable.CosmoRadioButton_cosmoRadioButtonChecked, false)
-                paddingStart = getDimension(R.styleable.CosmoRadioButton_cosmoRadioButtonPaddingStart, 15f)
-                paddingEnd = getDimension(R.styleable.CosmoRadioButton_cosmoRadioButtonPaddingEnd, 15f)
+                val subTitleStyleResId = getResourceId(R.styleable.CosmoRadioButton_crbSubTitleStyle, 0)
+                if (subTitleStyleResId != 0) {
+                    val styledAttrs = context.obtainStyledAttributes(subTitleStyleResId, R.styleable.CosmoRadioButton)
+                    subtitleTextSize = styledAttrs.getDimension(R.styleable.CosmoRadioButton_crbSubtitleTextSize, titleTextSize)
+                    subtitleTextColor = styledAttrs.getColor(R.styleable.CosmoRadioButton_crbSubtitleTextColor, titleTextColor)
 
-                val selectedDrawableId = getResourceId(R.styleable.CosmoRadioButton_cosmoRadioButtonSelectedDrawable, -1)
-                val unselectedDrawableId = getResourceId(R.styleable.CosmoRadioButton_cosmoRadioButtonUnselectedDrawable, -1)
+                    val fontFamilyId = styledAttrs.getResourceId(R.styleable.CosmoRadioButton_crbSubTitleFont, -1)
+                    if (fontFamilyId != -1) {
+                        subTitleFontFamily = ResourcesCompat.getFont(context, fontFamilyId)
+                    }
+                    styledAttrs.recycle()
+                }
+
+                customBackgroundRadius = getDimension(R.styleable.CosmoRadioButton_crbBackgroundRadius, 20f)
+                customBackgroundColor = getColor(R.styleable.CosmoRadioButton_crbBackgroundColor, Color.BLACK)
+                backgroundHeight = getDimensionPixelSize(R.styleable.CosmoRadioButton_crbBackgroundHeight, 0)
+                radioButtonColor = getColor(R.styleable.CosmoRadioButton_crbRadioButtonColor, Color.BLUE)
+                isChecked = getBoolean(R.styleable.CosmoRadioButton_crbChecked, false)
+                paddingStart = getDimension(R.styleable.CosmoRadioButton_crbPaddingStart, 15f)
+                paddingEnd = getDimension(R.styleable.CosmoRadioButton_crbPaddingEnd, 15f)
+
+                val selectedDrawableId = getResourceId(R.styleable.CosmoRadioButton_crbSelectedDrawable, -1)
+                val unselectedDrawableId = getResourceId(R.styleable.CosmoRadioButton_crbUnselectedDrawable, -1)
                 if (selectedDrawableId != -1) {
                     selectedDrawable = ContextCompat.getDrawable(context, selectedDrawableId)
                 }
                 if (unselectedDrawableId != -1) {
                     unselectedDrawable = ContextCompat.getDrawable(context, unselectedDrawableId)
                 }
-
-                // Initialize the font family
-                val fontFamilyId = getResourceId(R.styleable.CosmoRadioButton_cosmoRadioButtonFont, -1)
-                if (fontFamilyId != -1) {
-                    fontFamily = ResourcesCompat.getFont(context, fontFamilyId)
-                }
+ 
 
                 shapeDrawable.paint.color = customBackgroundColor
                 backgroundDrawable = shapeDrawable.apply {
@@ -133,6 +150,7 @@ class CosmoRadioButton @JvmOverloads constructor(
         }
     }
 
+    
 
     override fun onDraw(canvas: Canvas) {
 
@@ -156,7 +174,7 @@ class CosmoRadioButton @JvmOverloads constructor(
             // Set paint properties for the title text
             paint.color = titleTextColor
             paint.textSize = titleTextSize
-            paint.typeface = fontFamily
+            paint.typeface = titleFontFamily
 
             val topPadding = ((backgroundHeight - (titleTextSize + subtitleTextSize)) / 2) + 10f
             Log.d("CosmoRadioButton", "onDraw: TopPadding $topPadding")
@@ -185,7 +203,7 @@ class CosmoRadioButton @JvmOverloads constructor(
             // Ellipsis logic for the subtitle text
             paint.color = subtitleTextColor
             paint.textSize = subtitleTextSize
-            paint.typeface = fontFamily
+            paint.typeface = subTitleFontFamily
             val subtitleY = titleY + 5f + subtitleTextSize
 
             val subtitleWidth = paint.measureText(subtitle)
@@ -207,7 +225,7 @@ class CosmoRadioButton @JvmOverloads constructor(
             // Set paint properties for the title text when subtitle is blank
             paint.color = titleTextColor
             paint.textSize = titleTextSize
-            paint.typeface = fontFamily
+            paint.typeface = titleFontFamily
 
             val titleX = 20f * 2 + 10f + paddingStart + 10f
             val titleY = backgroundHeight / 2f - (paint.descent() + paint.ascent()) / 2
