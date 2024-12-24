@@ -17,27 +17,4 @@
         <attr name="maxOffset" format="float" />
     </declare-styleable>
 
-    <declare-styleable name="CosmoRadioButton">
-        <attr name="crbTitle" format="string" />
-        <attr name="crbSubTitle" format="string" />
-        <attr name="crbTitleTextSize" format="dimension" />
-        <attr name="crbSubtitleTextSize" format="dimension" />
-        <attr name="crbBackgroundHeight" format="dimension" />
-        <attr name="crbBackgroundRadius" format="dimension" />
-        <attr name="crbTitleTextColor" format="color" />
-        <attr name="crbSubtitleTextColor" format="color" />
-        <attr name="crbBackgroundColor" format="reference" />
-        <attr name="crbRadioButtonColor" format="color" />
-        <attr name="crbChecked" format="boolean" />
-        <attr name="crbPaddingStart" format="dimension" />
-        <attr name="crbPaddingEnd" format="dimension" />
-        <attr name="crbSelectedDrawable" format="reference" />
-        <attr name="crbUnselectedDrawable" format="reference" />
-        <attr name="crbTitleFont" format="reference"/>
-        <attr name="crbSubTitleFont" format="reference"/>
-        <attr name="crbTitleStyle" format="reference"/>
-        <attr name="crbSubTitleStyle" format="reference"/>
-    </declare-styleable>
-
-
 </resources>

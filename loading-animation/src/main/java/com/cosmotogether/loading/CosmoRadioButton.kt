@@ -1,7 +1,6 @@
 package com.cosmotogether.loading
 
 import android.content.Context
-import android.content.res.TypedArray
 import android.graphics.Canvas
 import android.graphics.Color
 import android.graphics.Paint
@@ -9,7 +8,6 @@ import android.graphics.Typeface
 import android.graphics.drawable.Drawable
 import android.graphics.drawable.shapes.RoundRectShape
 import android.util.AttributeSet
-import android.util.Log
 import androidx.appcompat.widget.AppCompatRadioButton
 import androidx.core.content.ContextCompat
 import androidx.core.content.res.ResourcesCompat
@@ -156,15 +154,18 @@ class CosmoRadioButton @JvmOverloads constructor(
 
         background = backgroundDrawable
 
-        // Draw the drawable for selected/unselected state
         val drawable = if (isChecked) selectedDrawable else unselectedDrawable
         drawable?.let {
-            val drawableSize =
-                it.intrinsicWidth.coerceAtMost(it.intrinsicHeight) // Use the drawable's intrinsic size
-            val drawableLeft = (20f + paddingStart - drawableSize / 2).toInt()
+            // Convert 18dp to pixels
+            val drawableSize = (18f * resources.displayMetrics.density).toInt()
+
+            // Calculate the drawable bounds
+            val drawableLeft = (18f + paddingStart - drawableSize / 2).toInt()
             val drawableTop = (height / 2 - drawableSize / 2).toInt()
-            val drawableRight = (20f + paddingStart + drawableSize / 2).toInt()
+            val drawableRight = (18f + paddingStart + drawableSize / 2).toInt()
             val drawableBottom = (height / 2 + drawableSize / 2).toInt()
+
+            // Set the bounds and draw the drawable
             it.setBounds(drawableLeft, drawableTop, drawableRight, drawableBottom)
             it.draw(canvas)
         }
@@ -177,9 +178,7 @@ class CosmoRadioButton @JvmOverloads constructor(
             paint.typeface = titleFontFamily
 
             val topPadding = ((backgroundHeight - (titleTextSize + subtitleTextSize)) / 2) + 10f
-            Log.d("CosmoRadioButton", "onDraw: TopPadding $topPadding")
-
-            val titleX = 20f * 2 + 10f + paddingStart + 10f
+            val titleX = paddingStart + ((drawable?.intrinsicWidth?.plus(15)) ?: 0)
             val titleY = topPadding + titleTextSize / 2
 
             // Ellipsis logic for the title text
@@ -187,11 +186,9 @@ class CosmoRadioButton @JvmOverloads constructor(
             val titleWidth = paint.measureText(title)
             val ellipsis = "..."
             if (titleWidth > availableWidth) {
-                // Truncate title text to fit, remove last 6 characters and add ellipsis
                 var truncatedTitle = title
                 while (paint.measureText(truncatedTitle + ellipsis) > availableWidth) {
-                    // Drop the last 6 characters at a time
-                    truncatedTitle = truncatedTitle.dropLast(8)
+                    truncatedTitle = truncatedTitle.dropLast(3)
                 }
                 truncatedTitle += ellipsis
                 canvas.drawText(truncatedTitle, titleX, titleY, paint)
@@ -211,8 +208,7 @@ class CosmoRadioButton @JvmOverloads constructor(
                 // Truncate subtitle text to fit, remove last 6 characters and add ellipsis
                 var truncatedSubtitle = subtitle
                 while (paint.measureText(truncatedSubtitle + ellipsis) > availableWidth) {
-                    // Drop the last 6 characters at a time
-                    truncatedSubtitle = truncatedSubtitle.dropLast(8)
+                    truncatedSubtitle = truncatedSubtitle.dropLast(3)
                 }
                 truncatedSubtitle += ellipsis
                 canvas.drawText(truncatedSubtitle, titleX, subtitleY, paint)
@@ -238,8 +234,7 @@ class CosmoRadioButton @JvmOverloads constructor(
                 // Truncate title text to fit, remove last 6 characters and add ellipsis
                 var truncatedTitle = title
                 while (paint.measureText(truncatedTitle + ellipsis) > availableWidth) {
-                    // Drop the last 6 characters at a time
-                    truncatedTitle = truncatedTitle.dropLast(8)
+                    truncatedTitle = truncatedTitle.dropLast(3)
                 }
                 truncatedTitle += ellipsis
                 canvas.drawText(truncatedTitle, titleX, titleY, paint)

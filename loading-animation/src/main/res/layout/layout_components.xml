@@ -7,6 +7,7 @@
 
     <com.cosmotogether.loading.CosmoRadioButton
         style="@style/CosmoRadioButtonBaseStyle"
+        android:id="@+id/cosmoRadioButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
@@ -16,8 +17,48 @@
         app:crbTitle="Select location"
         app:crbSubTitle="Chicago International hospital, United States"
         app:crbTitleStyle="@style/CosmoRadioButtonSmallTitleStyle"
-        app:crbSubTitleStyle="@style/CosmoRadioButtonMediumSubtitleStyle"
+        app:crbSubTitleStyle="@style/CosmoRadioButtonMediumSubtitleStyle" />
 
+    <com.cosmotogether.loading.CosmoTextButton
+        style="@style/CosmoTextButtonBaseStyle"
+        android:id="@+id/cosmoTextButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:ctbTitle="Select location"
+        app:ctbTitleStyle="@style/CosmoTextButtonMediumTitleStyle"
+        app:layout_constraintTop_toBottomOf="@id/cosmoRadioButton"
+        android:layout_marginTop="10dp"
         />
+
+    <com.cosmotogether.loading.CosmoIconTextButton
+        style="@style/CosmoIconTextButtonBaseStyle"
+        android:id="@+id/cosmoIconTextButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:citStartDrawable="@drawable/ic_bluetooth"
+        app:citTitle="Select location"
+        app:citTitleStyle="@style/CosmoIconTextButtonLargeTitleStyle"
+        app:layout_constraintTop_toBottomOf="@id/cosmoTextButton"
+        android:layout_marginTop="10dp"
+        />
+
+    <com.cosmotogether.loading.CosmoIconTextButton
+        style="@style/CosmoIconTextButtonBaseStyle"
+        android:id="@+id/cosmoIconTextButton2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:citStartDrawable="@drawable/ic_add_buddy"
+        app:citTitle="Select location"
+        app:citTitleStyle="@style/CosmoIconTextButtonLargeTitleStyle"
+        app:layout_constraintTop_toBottomOf="@id/cosmoIconTextButton"
+        android:layout_marginTop="10dp"
+        />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
