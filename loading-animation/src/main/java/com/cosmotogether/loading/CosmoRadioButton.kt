@@ -66,6 +66,7 @@ class CosmoRadioButton @JvmOverloads constructor(
             0
         ).apply {
             try {
+
                 title = getString(R.styleable.CosmoRadioButton_title).toString()
                 getString(R.styleable.CosmoRadioButton_subTitle)?.let {
                     subtitle = it
@@ -77,12 +78,17 @@ class CosmoRadioButton @JvmOverloads constructor(
                 subtitleTextSize = getDimension(R.styleable.CosmoRadioButton_subtitleTextSize, 0f)
 
                 titleTextColor = getColor(R.styleable.CosmoRadioButton_titleTextColor, Color.BLACK)
-                subtitleTextColor = getColor(R.styleable.CosmoRadioButton_subtitleTextColor, Color.BLACK)
+                subtitleTextColor =
+                    getColor(R.styleable.CosmoRadioButton_subtitleTextColor, Color.BLACK)
 
-                customBackgroundRadius = getDimension(R.styleable.CosmoRadioButton_backgroundRadius, 20f)
-                customBackgroundColor = getColor(R.styleable.CosmoRadioButton_backgroundColorCode, Color.BLACK)
-                backgroundHeight = getDimensionPixelSize(R.styleable.CosmoRadioButton_backgroundHeight, 0)
-                radioButtonColor = getColor(R.styleable.CosmoRadioButton_radioButtonColor, Color.BLUE)
+                customBackgroundRadius =
+                    getDimension(R.styleable.CosmoRadioButton_backgroundRadius, 20f)
+                customBackgroundColor =
+                    getColor(R.styleable.CosmoRadioButton_backgroundColorCode, Color.BLACK)
+                backgroundHeight =
+                    getDimensionPixelSize(R.styleable.CosmoRadioButton_backgroundHeight, 0)
+                radioButtonColor =
+                    getColor(R.styleable.CosmoRadioButton_radioButtonColor, Color.BLUE)
                 isChecked = getBoolean(R.styleable.CosmoRadioButton_checked, false)
                 paddingStart = getDimension(R.styleable.CosmoRadioButton_paddingStart, 15f)
                 paddingEnd = getDimension(R.styleable.CosmoRadioButton_paddingEnd, 15f)
@@ -156,7 +162,7 @@ class CosmoRadioButton @JvmOverloads constructor(
 
 
         if (subtitle.isNotBlank()) {
-
+            // Set paint properties for the title text
             paint.color = titleTextColor
             paint.textSize = titleTextSize
             paint.typeface = fontFamily
@@ -166,26 +172,74 @@ class CosmoRadioButton @JvmOverloads constructor(
 
             val titleX = 20f * 2 + 10f + paddingStart + 10f
             val titleY = topPadding + titleTextSize / 2
-            canvas.drawText(title, titleX, titleY, paint)
 
-            // Calculate Y position for the subtitle (subtitle follows the title with no gap)
-            val subtitleY = titleY + 5f + subtitleTextSize
+            // Ellipsis logic for the title text
+            val availableWidth = width - titleX  // Adjust based on your view width and position
+            val titleWidth = paint.measureText(title)
+            val ellipsis = "..."
+            if (titleWidth > availableWidth) {
+                // Truncate title text to fit, remove last 6 characters and add ellipsis
+                var truncatedTitle = title
+                while (paint.measureText(truncatedTitle + ellipsis) > availableWidth) {
+                    // Drop the last 6 characters at a time
+                    truncatedTitle = truncatedTitle.dropLast(8)
+                }
+                truncatedTitle += ellipsis
+                canvas.drawText(truncatedTitle, titleX, titleY, paint)
+            } else {
+                // If title fits, draw normally
+                canvas.drawText(title, titleX, titleY, paint)
+            }
+
+            // Ellipsis logic for the subtitle text
             paint.color = subtitleTextColor
             paint.textSize = subtitleTextSize
             paint.typeface = fontFamily
-            canvas.drawText(subtitle, titleX, subtitleY, paint)
+            val subtitleY = titleY + 5f + subtitleTextSize
+
+            val subtitleWidth = paint.measureText(subtitle)
+            if (subtitleWidth > availableWidth) {
+                // Truncate subtitle text to fit, remove last 6 characters and add ellipsis
+                var truncatedSubtitle = subtitle
+                while (paint.measureText(truncatedSubtitle + ellipsis) > availableWidth) {
+                    // Drop the last 6 characters at a time
+                    truncatedSubtitle = truncatedSubtitle.dropLast(8)
+                }
+                truncatedSubtitle += ellipsis
+                canvas.drawText(truncatedSubtitle, titleX, subtitleY, paint)
+            } else {
+                // If subtitle fits, draw normally
+                canvas.drawText(subtitle, titleX, subtitleY, paint)
+            }
 
         } else {
-
+            // Set paint properties for the title text when subtitle is blank
             paint.color = titleTextColor
             paint.textSize = titleTextSize
             paint.typeface = fontFamily
 
             val titleX = 20f * 2 + 10f + paddingStart + 10f
             val titleY = backgroundHeight / 2f - (paint.descent() + paint.ascent()) / 2
-            canvas.drawText(title, titleX, titleY, paint)
 
+            // Ellipsis logic for the title text
+            val availableWidth = width - titleX  // Adjust based on your view width and position
+            val titleWidth = paint.measureText(title)
+            val ellipsis = "..."
+            if (titleWidth > availableWidth) {
+                // Truncate title text to fit, remove last 6 characters and add ellipsis
+                var truncatedTitle = title
+                while (paint.measureText(truncatedTitle + ellipsis) > availableWidth) {
+                    // Drop the last 6 characters at a time
+                    truncatedTitle = truncatedTitle.dropLast(8)
+                }
+                truncatedTitle += ellipsis
+                canvas.drawText(truncatedTitle, titleX, titleY, paint)
+            } else {
+                // If title fits, draw normally
+                canvas.drawText(title, titleX, titleY, paint)
+            }
         }
+
 
 
     }

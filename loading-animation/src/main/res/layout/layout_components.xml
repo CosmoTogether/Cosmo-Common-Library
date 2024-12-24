@@ -14,6 +14,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:checked="false"
         app:title="Select location"
+        app:subTitle="Chicago International hospital, United States"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
