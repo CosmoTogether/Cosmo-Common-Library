@@ -1,0 +1,50 @@
+<resources>
+
+    <declare-styleable name="CosmoTextButton">
+        <attr name="ctbTitle" format="string" />
+        <attr name="ctbTitleTextSize" format="dimension" />
+        <attr name="ctbBackgroundHeight" format="dimension" />
+        <attr name="ctbBackgroundRadius" format="dimension" />
+        <attr name="ctbTitleTextColor" format="color" />
+        <attr name="ctbBackgroundColor" format="reference" />
+        <attr name="ctbRadioButtonColor" format="color" />
+        <attr name="ctbPaddingStart" format="dimension" />
+        <attr name="ctbPaddingEnd" format="dimension" />
+        <attr name="ctbTitleFont" format="reference"/>
+        <attr name="ctbTitleStyle" format="reference"/>
+    </declare-styleable>
+
+    <style name="CosmoTextButtonBaseStyle">
+        <item name="ctbBackgroundHeight">@dimen/cosmo_text_button_height</item>
+        <item name="ctbBackgroundRadius">10dp</item>
+        <item name="ctbBackgroundColor">@color/setting_tile_color</item>
+        <item name="ctbPaddingStart">15dp</item>
+        <item name="ctbPaddingEnd">15dp</item>
+    </style>
+
+    <style name="CosmoTextButtonSmallTitleStyle" parent="CosmoTextButtonBaseStyle">
+        <item name="ctbTitleTextSize">@dimen/text_size_small</item>
+        <item name="ctbTitleTextColor">@color/medium_gray</item>
+        <item name="ctbTitleFont">@font/neuzeit_bold</item>
+    </style>
+
+    <style name="CosmoTextButtonMediumTitleStyle" parent="CosmoTextButtonBaseStyle">
+        <item name="ctbTitleTextSize">@dimen/text_size_medium</item>
+        <item name="ctbTitleTextColor">@color/medium_gray</item>
+        <item name="ctbTitleFont">@font/neuzeit_bold</item>
+    </style>
+
+    <style name="CosmoTextButtonLargeTitleStyle" parent="CosmoTextButtonBaseStyle">
+        <item name="ctbTitleTextSize">@dimen/text_size_large</item>
+        <item name="ctbTitleTextColor">@color/medium_gray</item>
+        <item name="ctbTitleFont">@font/neuzeit_bold</item>
+    </style>
+
+    <style name="CosmoTextButtonExtraLargeTitleStyle" parent="CosmoTextButtonBaseStyle">
+        <item name="ctbTitleTextSize">@dimen/text_size_extra_large</item>
+        <item name="ctbTitleTextColor">@color/medium_gray</item>
+        <item name="ctbTitleFont">@font/neuzeit_bold</item>
+    </style>
+
+    
+</resources>

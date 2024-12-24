@@ -1,0 +1,86 @@
+<resources>
+
+    <declare-styleable name="CosmoRadioButton">
+        <attr name="crbTitle" format="string" />
+        <attr name="crbSubTitle" format="string" />
+        <attr name="crbTitleTextSize" format="dimension" />
+        <attr name="crbSubtitleTextSize" format="dimension" />
+        <attr name="crbBackgroundHeight" format="dimension" />
+        <attr name="crbBackgroundRadius" format="dimension" />
+        <attr name="crbTitleTextColor" format="color" />
+        <attr name="crbSubtitleTextColor" format="color" />
+        <attr name="crbBackgroundColor" format="reference" />
+        <attr name="crbRadioButtonColor" format="color" />
+        <attr name="crbChecked" format="boolean" />
+        <attr name="crbPaddingStart" format="dimension" />
+        <attr name="crbPaddingEnd" format="dimension" />
+        <attr name="crbSelectedDrawable" format="reference" />
+        <attr name="crbUnselectedDrawable" format="reference" />
+        <attr name="crbTitleFont" format="reference"/>
+        <attr name="crbSubTitleFont" format="reference"/>
+        <attr name="crbTitleStyle" format="reference"/>
+        <attr name="crbSubTitleStyle" format="reference"/>
+    </declare-styleable>
+
+
+    <style name="CosmoRadioButtonBaseStyle">
+        <item name="crbBackgroundHeight">@dimen/cosmo_radio_button_tile_height</item>
+        <item name="crbBackgroundRadius">10dp</item>
+        <item name="crbBackgroundColor">@color/setting_tile_color</item>
+        <item name="crbPaddingStart">15dp</item>
+        <item name="crbPaddingEnd">15dp</item>
+        <item name="crbSelectedDrawable">@drawable/ic_radio_selected</item>
+        <item name="crbUnselectedDrawable">@drawable/ic_radio_unselected</item>
+    </style>
+
+    <style name="CosmoRadioButtonSmallTitleStyle" parent="CosmoRadioButtonBaseStyle">
+        <item name="crbTitleTextSize">@dimen/text_size_small</item>
+        <item name="crbTitleTextColor">@color/medium_gray</item>
+        <item name="crbTitleFont">@font/neuzeit_bold</item>
+    </style>
+
+    <style name="CosmoRadioButtonMediumTitleStyle" parent="CosmoRadioButtonBaseStyle">
+        <item name="crbTitleTextSize">@dimen/text_size_medium</item>
+        <item name="crbTitleTextColor">@color/medium_gray</item>
+        <item name="crbTitleFont">@font/neuzeit_bold</item>
+    </style>
+
+    <style name="CosmoRadioButtonLargeTitleStyle" parent="CosmoRadioButtonBaseStyle">
+        <item name="crbTitleTextSize">@dimen/text_size_large</item>
+        <item name="crbTitleTextColor">@color/medium_gray</item>
+        <item name="crbTitleFont">@font/neuzeit_bold</item>
+    </style>
+
+    <style name="CosmoRadioButtonExtraLargeTitleStyle" parent="CosmoRadioButtonBaseStyle">
+        <item name="crbTitleTextSize">@dimen/text_size_extra_large</item>
+        <item name="crbTitleTextColor">@color/white</item>
+        <item name="crbTitleFont">@font/neuzeit_bold</item>
+    </style>
+
+    <style name="CosmoRadioButtonSmallSubtitleStyle" parent="CosmoRadioButtonBaseStyle">
+        <item name="crbSubtitleTextSize">@dimen/text_size_small</item>
+        <item name="crbSubtitleTextColor">@color/white</item>
+        <item name="crbSubTitleFont">@font/neuzeit_bold</item>
+    </style>
+
+    <style name="CosmoRadioButtonMediumSubtitleStyle" parent="CosmoRadioButtonBaseStyle">
+        <item name="crbSubtitleTextSize">@dimen/text_size_medium</item>
+        <item name="crbSubtitleTextColor">@color/white</item>
+        <item name="crbSubTitleFont">@font/neuzeit_bold</item>
+    </style>
+
+    <style name="CosmoRadioButtonLargeSubtitleStyle" parent="CosmoRadioButtonBaseStyle">
+        <item name="crbSubtitleTextSize">@dimen/text_size_large</item>
+        <item name="crbSubtitleTextColor">@color/white</item>
+        <item name="crbSubTitleFont">@font/neuzeit_bold</item>
+    </style>
+
+    <style name="CosmoRadioButtonExtraLargeSubtitleStyle" parent="CosmoRadioButtonBaseStyle">
+        <item name="crbSubtitleTextSize">@dimen/text_size_extra_large</item>
+        <item name="crbSubtitleTextColor">@color/white</item>
+        <item name="crbSubTitleFont">@font/neuzeit_bold</item>
+    </style>
+
+
+
+</resources>

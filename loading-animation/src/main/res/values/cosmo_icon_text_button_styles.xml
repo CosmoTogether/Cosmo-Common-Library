@@ -1,0 +1,51 @@
+<resources>
+
+    <declare-styleable name="CosmoIconTextButton">
+        <attr name="citStartDrawable" format="reference" />
+        <attr name="citTitle" format="string" />
+        <attr name="citStartDrawableSize" format="dimension" />
+        <attr name="citTitleTextSize" format="dimension" />
+        <attr name="citBackgroundHeight" format="dimension" />
+        <attr name="citBackgroundRadius" format="dimension" />
+        <attr name="citTitleTextColor" format="color" />
+        <attr name="citBackgroundColor" format="reference" />
+        <attr name="citPaddingStart" format="dimension" />
+        <attr name="citPaddingEnd" format="dimension" />
+        <attr name="citTitleFont" format="reference"/>
+        <attr name="citTitleStyle" format="reference"/>
+    </declare-styleable>
+
+    <style name="CosmoIconTextButtonBaseStyle">
+        <item name="citBackgroundHeight">@dimen/setting_icon_text_height</item>
+        <item name="citBackgroundRadius">10dp</item>
+        <item name="citBackgroundColor">@color/setting_tile_color</item>
+        <item name="citPaddingStart">15dp</item>
+        <item name="citPaddingEnd">15dp</item>
+    </style>
+
+    <style name="CosmoIconTextButtonSmallTitleStyle" parent="CosmoIconTextButtonBaseStyle">
+        <item name="citTitleTextSize">@dimen/text_size_small</item>
+        <item name="citTitleTextColor">@color/white</item>
+        <item name="citTitleFont">@font/neuzeit_bold</item>
+    </style>
+
+    <style name="CosmoIconTextButtonMediumTitleStyle" parent="CosmoIconTextButtonBaseStyle">
+        <item name="citTitleTextSize">@dimen/text_size_medium</item>
+        <item name="citTitleTextColor">@color/white</item>
+        <item name="citTitleFont">@font/neuzeit_bold</item>
+    </style>
+
+    <style name="CosmoIconTextButtonLargeTitleStyle" parent="CosmoIconTextButtonBaseStyle">
+        <item name="citTitleTextSize">@dimen/text_size_large</item>
+        <item name="citTitleTextColor">@color/white</item>
+        <item name="citTitleFont">@font/neuzeit_bold</item>
+    </style>
+
+    <style name="CosmoIconTextButtonExtraLargeTitleStyle" parent="CosmoIconTextButtonBaseStyle">
+        <item name="citTitleTextSize">@dimen/text_size_extra_large</item>
+        <item name="citTitleTextColor">@color/white</item>
+        <item name="citTitleFont">@font/neuzeit_bold</item>
+    </style>
+
+
+</resources>

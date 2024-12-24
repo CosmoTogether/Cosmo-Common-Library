@@ -17,16 +17,12 @@
         <item name="cosmoTextLarge">@style/cosmo_text_large_smaller</item>
     </style>
 
-
-
     <style name="cosmo_text_large_smaller">
         <item name="android:textSize">30sp</item>
     </style>
     <style name="cosmo_text_medium_smaller">
         <item name="android:textSize">22sp</item>
     </style>
-
-
 
 
 </resources>
