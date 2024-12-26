@@ -27,8 +27,8 @@
         <item name="crbBackgroundHeight">@dimen/cosmo_radio_button_tile_height</item>
         <item name="crbBackgroundRadius">10dp</item>
         <item name="crbBackgroundColor">@color/setting_tile_color</item>
-        <item name="crbPaddingStart">15dp</item>
-        <item name="crbPaddingEnd">15dp</item>
+        <item name="crbPaddingStart">25dp</item>
+        <item name="crbPaddingEnd">25dp</item>
         <item name="crbSelectedDrawable">@drawable/ic_radio_selected</item>
         <item name="crbUnselectedDrawable">@drawable/ic_radio_unselected</item>
     </style>

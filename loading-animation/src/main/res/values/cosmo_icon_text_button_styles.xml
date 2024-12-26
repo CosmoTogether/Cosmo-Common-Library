@@ -19,8 +19,9 @@
         <item name="citBackgroundHeight">@dimen/setting_icon_text_height</item>
         <item name="citBackgroundRadius">10dp</item>
         <item name="citBackgroundColor">@color/setting_tile_color</item>
-        <item name="citPaddingStart">15dp</item>
-        <item name="citPaddingEnd">15dp</item>
+        <item name="citPaddingStart">25dp</item>
+        <item name="citPaddingEnd">25dp</item>
+        <item name="citStartDrawableSize">40dp</item>
     </style>
 
     <style name="CosmoIconTextButtonSmallTitleStyle" parent="CosmoIconTextButtonBaseStyle">

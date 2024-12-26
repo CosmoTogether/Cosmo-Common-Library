@@ -115,7 +115,7 @@ class CosmoRadioButton @JvmOverloads constructor(
                 if (unselectedDrawableId != -1) {
                     unselectedDrawable = ContextCompat.getDrawable(context, unselectedDrawableId)
                 }
- 
+
 
                 shapeDrawable.paint.color = customBackgroundColor
                 backgroundDrawable = shapeDrawable.apply {
@@ -148,7 +148,7 @@ class CosmoRadioButton @JvmOverloads constructor(
         }
     }
 
-    
+
 
     override fun onDraw(canvas: Canvas) {
 
@@ -156,17 +156,16 @@ class CosmoRadioButton @JvmOverloads constructor(
 
         val drawable = if (isChecked) selectedDrawable else unselectedDrawable
         drawable?.let {
-            // Convert 18dp to pixels
+
             val drawableSize = (18f * resources.displayMetrics.density).toInt()
 
             // Calculate the drawable bounds
-            val drawableLeft = (18f + paddingStart - drawableSize / 2).toInt()
-            val drawableTop = (height / 2 - drawableSize / 2).toInt()
-            val drawableRight = (18f + paddingStart + drawableSize / 2).toInt()
-            val drawableBottom = (height / 2 + drawableSize / 2).toInt()
-
+            val drawableLeft = paddingStart - drawableSize / 2
+            val drawableTop = (height / 2 - drawableSize / 2)
+            val drawableRight = paddingStart + drawableSize / 2
+            val drawableBottom = (height / 2 + drawableSize / 2)
             // Set the bounds and draw the drawable
-            it.setBounds(drawableLeft, drawableTop, drawableRight, drawableBottom)
+            it.setBounds(drawableLeft.toInt(), drawableTop, drawableRight.toInt(), drawableBottom)
             it.draw(canvas)
         }
 
@@ -177,8 +176,8 @@ class CosmoRadioButton @JvmOverloads constructor(
             paint.textSize = titleTextSize
             paint.typeface = titleFontFamily
 
-            val topPadding = ((backgroundHeight - (titleTextSize + subtitleTextSize)) / 2) + 10f
-            val titleX = paddingStart + ((drawable?.intrinsicWidth?.plus(15)) ?: 0)
+            val topPadding = ((backgroundHeight - (titleTextSize + subtitleTextSize)) / 2)
+            val titleX = paddingStart + ((drawable?.intrinsicWidth) ?: 0)
             val titleY = topPadding + titleTextSize / 2
 
             // Ellipsis logic for the title text
@@ -223,7 +222,7 @@ class CosmoRadioButton @JvmOverloads constructor(
             paint.textSize = titleTextSize
             paint.typeface = titleFontFamily
 
-            val titleX = 20f * 2 + 10f + paddingStart + 10f
+            val titleX = paddingStart + ((drawable?.intrinsicWidth) ?: 0)
             val titleY = backgroundHeight / 2f - (paint.descent() + paint.ascent()) / 2
 
             // Ellipsis logic for the title text

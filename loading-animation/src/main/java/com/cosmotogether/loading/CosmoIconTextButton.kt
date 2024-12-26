@@ -130,13 +130,12 @@ class CosmoIconTextButton @JvmOverloads constructor(
             val drawableSize = (startDrawableSize * resources.displayMetrics.density).toInt()
 
             // Calculate the drawable bounds
-            val drawableLeft = (startDrawableSize + paddingStart - drawableSize / 2).toInt()
-            val drawableTop = (height / 2 - drawableSize / 2).toInt()
-            val drawableRight = (startDrawableSize + paddingStart + drawableSize / 2).toInt()
-            val drawableBottom = (height / 2 + drawableSize / 2).toInt()
-
+            val drawableLeft = paddingStart - drawableSize / 2
+            val drawableTop = (height / 2 - drawableSize / 2)
+            val drawableRight = paddingStart + drawableSize / 2
+            val drawableBottom = (height / 2 + drawableSize / 2)
             // Set the bounds and draw the drawable
-            it.setBounds(drawableLeft, drawableTop, drawableRight, drawableBottom)
+            it.setBounds(drawableLeft.toInt(), drawableTop, drawableRight.toInt(), drawableBottom)
             it.draw(canvas)
         }
 
@@ -144,7 +143,7 @@ class CosmoIconTextButton @JvmOverloads constructor(
         paint.textSize = titleTextSize
         paint.typeface = titleFontFamily
 
-        val titleX = paddingStart + ((startDrawable?.intrinsicWidth?.plus(0)) ?: 0)
+        val titleX = startDrawable?.intrinsicWidth?.toFloat() ?: 0f
         val titleY = backgroundHeight / 2f - (paint.descent() + paint.ascent()) / 2
 
         // Ellipsis logic for the title text
